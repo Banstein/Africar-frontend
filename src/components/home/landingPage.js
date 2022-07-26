@@ -3,11 +3,14 @@ import { FaBeer } from 'react-icons/fa';
 import { GrUserExpert } from 'react-icons/gr';
 import { AiFillCar } from 'react-icons/ai';
 import { GrUserSettings } from 'react-icons/gr';
-import {GrUserAdd} from 'react-icons/gr'
-import {BsGithub} from 'react-icons/bs'
-import {BsTwitter} from 'react-icons/bs'
-import Logo from '../../assets/afrilogo.png'
-import './landingPage.css'
+import { GrUserAdd } from 'react-icons/gr';
+import { BsGithub } from 'react-icons/bs';
+import { BsTwitter } from 'react-icons/bs';
+import Logo from '../../assets/afrilogo.png';
+import './landingPage.css';
+import Cards from '../carsCars.js/Cards';
+import CardAudi from '../carsCars.js/CardAudi'
+import CardBenz from '../carsCars.js/CardBenz'
 
 function LandingPage() {
   const sidebarHandler = () => {
@@ -18,40 +21,40 @@ function LandingPage() {
       {/* Sidebar starts */}
       {/* Remove class [ hidden ] and replace [ sm:flex ] with [ flex ] */}
       {/* --------------------------------------------HEADER----------logo-------SIDEBAR--------------------*/}
-      <div className='w-84 absolute sm:relative bg-white-200 shadow md:h-full flex-col justify-between hidden sm:flex min-h-screen'>
+      <div className='absolute flex-col justify-between hidden min-h-screen shadow w-84 sm:relative bg-white-200 md:h-full sm:flex'>
         <div className='px-8 py-8 '>
-          <div className='h-16 w-full flex items-center'>
-           <img src={Logo} className='afrilogo'/>
+          <div className='flex items-center w-full h-16'>
+            <img src={Logo} className='afrilogo' />
           </div>
           {/* --------------------------------------------HEADER----logo---------------------------------*/}
 
           <ul className='mt-12 '>
-            <li className='flex w-full justify-between text-gray-300 hover:text-gray-500 cursor-pointer items-center mb-6'></li>
-            <li className='flex  justify-center text-gray-600 hover:text-gray-500 cursor-pointer items-center mb-6'>
+            <li className='flex items-center justify-between w-full mb-6 text-gray-300 cursor-pointer hover:text-gray-500'></li>
+            <li className='flex items-center justify-center mb-6 text-gray-600 cursor-pointer hover:text-gray-500'>
               <div className='flex items-center text-gray-900 bg-white border border-gray-200 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-300 dark:text-gray-700 dark:border-gray-200 dark:hover:bg-gray-200 dark:hover:border-gray-100 dark:focus:ring-gray-300'>
-                <span className='text-sm font-bold ml-2 '>BUY A CAR NOW!</span>
+                <span className='ml-2 text-sm font-bold '>BUY A CAR NOW!</span>
               </div>
             </li>
             <li className='flex w-full justify-between cursor-pointer items-center text-gray-900 bg-white border border-gray-200 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-300 dark:text-gray-700 dark:border-gray-200 dark:hover:bg-gray-200 dark:hover:border-gray-100 dark:focus:ring-gray-300'>
               <div className='flex items-center'>
                 <AiFillCar />
-                <span className='text-sm  ml-2'>Reserve your car now...</span>
+                <span className='ml-2 text-sm'>Reserve your car now...</span>
               </div>
             </li>
             <li className=' w-full justify-between cursor-pointer item-center flex items-center text-gray-900 bg-white border border-gray-200 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-300 dark:text-gray-700 dark:border-gray-200 dark:hover:bg-gray-200 dark:hover:border-gray-100 dark:focus:ring-gray-300'>
               <div className='flex items-center text-center'>
                 <GrUserSettings />
-                <span className='text-sm  ml-1'>Car Maintenance services</span>
+                <span className='ml-1 text-sm'>Car Maintenance services</span>
               </div>
             </li>
-            <li className='flex w-full justify-between text-gray-600 hover:text-gray-500 cursor-pointer items-center mb-6'>
+            <li className='flex items-center justify-between w-full mb-6 text-gray-600 cursor-pointer hover:text-gray-500'>
               <div className='flex items-center text-gray-900 bg-white border border-gray-200 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-300 dark:text-gray-700 dark:border-gray-200 dark:hover:bg-gray-200 dark:hover:border-gray-100 dark:focus:ring-gray-300'>
                 <GrUserExpert />
-                <span className='text-sm  ml-2 '>Login</span>
+                <span className='ml-2 text-sm '>Login</span>
               </div>
               <div className='flex items-center text-gray-900 bg-white border border-gray-200 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-300 dark:text-gray-700 dark:border-gray-200 dark:hover:bg-gray-200 dark:hover:border-gray-100 dark:focus:ring-gray-300'>
                 <GrUserAdd />
-                <span className='text-sm  ml-2 '>Signup</span>
+                <span className='ml-2 text-sm '>Signup</span>
               </div>
             </li>
           </ul>
@@ -62,14 +65,14 @@ function LandingPage() {
         {/* --------------------------------------------FOOTER-------------------------------------*/}
 
         <div className='px-8 border-t '>
-          <ul className='w-full flex items-center justify-between footer'>
-            <li className='cursor-pointer text-gray-700 pt-5 pb-3'>
-            <BsGithub/>
+          <ul className='flex items-center justify-between w-full footer'>
+            <li className='pt-5 pb-3 text-gray-700 cursor-pointer'>
+              <BsGithub />
             </li>
-            <li className='cursor-pointer text-gray-700 pt-5 pb-3'>
-           <BsTwitter/>
+            <li className='pt-5 pb-3 text-gray-700 cursor-pointer'>
+              <BsTwitter />
             </li>
-            <li className='cursor-pointer text-gray-700 pt-5 pb-3'>
+            <li className='pt-5 pb-3 text-gray-700 cursor-pointer'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 className='icon icon-tabler icon-tabler-settings'
@@ -87,7 +90,7 @@ function LandingPage() {
                 <circle cx={12} cy={12} r={3} />
               </svg>
             </li>
-            <li className='cursor-pointer text-gray-700 pt-5 pb-3'>
+            <li className='pt-5 pb-3 text-gray-700 cursor-pointer'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 className='icon icon-tabler icon-tabler-archive'
@@ -110,11 +113,11 @@ function LandingPage() {
         </div>
       </div>
       <div
-        className='w-64 z-40 absolute bg-gray-800 shadow md:h-full flex-col justify-between sm:hidden  transition duration-150 ease-in-out'
+        className='absolute z-40 flex-col justify-between w-64 transition duration-150 ease-in-out bg-gray-800 shadow md:h-full sm:hidden'
         id='mobile-nav'
       >
         <div
-          className='h-10 w-10 bg-gray-800 absolute right-0 mt-16 -mr-10 flex items-center shadow rounded-tr rounded-br justify-center cursor-pointer'
+          className='absolute right-0 flex items-center justify-center w-10 h-10 mt-16 -mr-10 bg-gray-800 rounded-tr rounded-br shadow cursor-pointer'
           id='mobile-toggler'
           //   onclick='sidebarHandler()'
         >
@@ -143,7 +146,7 @@ function LandingPage() {
           </svg>
         </div>
         <div className='px-8'>
-          <div className='h-16 w-full flex items-center'>
+          <div className='flex items-center w-full h-16'>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               width={144}
@@ -157,33 +160,33 @@ function LandingPage() {
             </svg>
           </div>
           <ul className='mt-12'>
-            <li className='flex w-full justify-between text-gray-300 hover:text-gray-500 cursor-pointer items-center mb-6'></li>
-            <li className='flex w-full justify-between text-gray-600 hover:text-gray-500 cursor-pointer items-center mb-6'>
+            <li className='flex items-center justify-between w-full mb-6 text-gray-300 cursor-pointer hover:text-gray-500'></li>
+            <li className='flex items-center justify-between w-full mb-6 text-gray-600 cursor-pointer hover:text-gray-500'>
               <div className='flex items-center'>
                 <GrUserExpert />
-                <span className='text-sm  ml-2'>PICK YOUR CAR NOW</span>
+                <span className='ml-2 text-sm'>PICK YOUR CAR NOW</span>
               </div>
-              <div className='py-1 px-3 bg-gray-700 rounded text-gray-500 flex items-center justify-center text-xs'>
+              <div className='flex items-center justify-center px-3 py-1 text-xs text-gray-500 bg-gray-700 rounded'>
                 25
               </div>
             </li>
-            <li className='flex w-full justify-between text-gray-600 hover:text-gray-500 cursor-pointer items-center mb-6'>
+            <li className='flex items-center justify-between w-full mb-6 text-gray-600 cursor-pointer hover:text-gray-500'>
               <div className='flex items-center'>
                 <AiFillCar />
-                <span className='text-sm  ml-2'>Reservation</span>
+                <span className='ml-2 text-sm'>Reservation</span>
               </div>
             </li>
-            <li className='flex w-full justify-between text-gray-600 hover:text-gray-500 cursor-pointer items-center'>
+            <li className='flex items-center justify-between w-full text-gray-600 cursor-pointer hover:text-gray-500'>
               <div className='flex items-center'>
                 <GrUserSettings />
-                <span className='text-sm  ml-2'>settings</span>
+                <span className='ml-2 text-sm'>settings</span>
               </div>
             </li>
           </ul>
         </div>
         <div className='px-8 border-t border-red-700'>
-          <ul className='w-full flex items-center justify-between bg-gray-800'>
-            <li className='cursor-pointer text-white pt-5 pb-3'>
+          <ul className='flex items-center justify-between w-full bg-gray-800'>
+            <li className='pt-5 pb-3 text-white cursor-pointer'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 className='icon icon-tabler icon-tabler-bell'
@@ -201,7 +204,7 @@ function LandingPage() {
                 <path d='M9 17v1a3 3 0 0 0 6 0v-1' />
               </svg>
             </li>
-            <li className='cursor-pointer text-white pt-5 pb-3'>
+            <li className='pt-5 pb-3 text-white cursor-pointer'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 className='icon icon-tabler icon-tabler-messages'
@@ -219,7 +222,7 @@ function LandingPage() {
                 <path d='M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2' />
               </svg>
             </li>
-            <li className='cursor-pointer text-white pt-5 pb-3'>
+            <li className='pt-5 pb-3 text-white cursor-pointer'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 className='icon icon-tabler icon-tabler-settings'
@@ -237,7 +240,7 @@ function LandingPage() {
                 <circle cx={12} cy={12} r={3} />
               </svg>
             </li>
-            <li className='cursor-pointer text-white pt-5 pb-3'>
+            <li className='pt-5 pb-3 text-white cursor-pointer'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 className='icon icon-tabler icon-tabler-archive'
@@ -262,15 +265,25 @@ function LandingPage() {
       {/* Sidebar ends */}
 
       {/* Remove class [ h-64 ] when adding a card block */}
-      <div className='car-container mx-auto py-10 h-64 md:w-4/5 w-11/12 px-6'>
-        <div className='header-title w-full h-full  border-gray-300'>
-            <div className=''>
-                <h2 className='car-header'>Book on our website to get the best price! Until July 31</h2>
-                <p className='car-header'>You will not be disapointed</p>
-            </div>
-            <div className='content'>
-                <div className='items'></div>
-            </div>
+      <div className='w-11/12 h-64 px-6 py-10 mx-auto car-container md:w-4/5'>
+        <div className='w-full h-full overflow-hidden border-gray-300 rounded shadow-lg header-title'>
+          <div className=''>
+            <h2 className='car-header '>
+              Book on our website to get the best price! Until July 31
+            </h2>
+            <p className='car-header'>You will not be disapointed</p>
+          </div>
+        </div>
+        <div className='content'>
+          <div className='items'>
+            <Cards />
+          </div>
+          <div className='items'>
+            <CardAudi />
+          </div>
+          <div className='items'>
+            <CardBenz/>
+          </div>
         </div>
       </div>
     </div>

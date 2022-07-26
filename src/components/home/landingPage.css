@@ -17,7 +17,7 @@
   color: #9fbd3b;
   display: flex;
   justify-content: center;
-  padding: 2.5rem
+  padding: 2.5rem;
 }
 
 .car-container p {
@@ -34,5 +34,24 @@
   box-shadow: 6px 1px 11px -4px rgba(0, 0, 0, 0.86);
   -webkit-box-shadow: 6px 1px 11px -4px rgba(0, 0, 0, 0.86);
   -moz-box-shadow: 6px 1px 11px -4px rgba(0, 0, 0, 0.86);
-  height: 14rem;
+  height: 15rem;
+  margin-bottom: 3rem;
+}
+
+.my-card {
+  width: 18rem;
+  background-color: #f2f2f2;
+  cursor: pointer;
+  margin-right: 5rem;
+}
+
+.my-card:hover {
+  border: solid 1px #9fbd3b;
+}
+
+.content {
+  display: flex;
+  justify-conter: space-between;
+  width: 100%;
+  margin: 2rem;
 }
