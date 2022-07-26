@@ -28,7 +28,8 @@
 }
 
 .header-title {
-  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 100)),
+  background:
+    linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 100)),
     url('../../assets/volk.gif');
   background-position: center;
   box-shadow: 6px 1px 11px -4px rgba(0, 0, 0, 0.86);
@@ -51,7 +52,6 @@
 
 .content {
   display: flex;
-  justify-conter: space-between;
   width: 100%;
   margin: 2rem;
 }
