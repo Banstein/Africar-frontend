@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { LockClosedIcon } from '@heroicons/react/solid';
-import './login.css'
+import logo from '../../assets/afrilogo.png';
+import './login.css';
 
 export default function Login() {
   return (
@@ -17,21 +18,17 @@ export default function Login() {
       <div className='min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8'>
         <div className='max-w-md w-full space-y-8'>
           <div>
-            <img
-              className='mx-auto h-12 w-auto'
-              src='https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg'
-              alt='Workflow'
-            />
+            <img className='mx-auto h-20 w-auto' src={logo} alt='Workflow' />
             <h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>
-              Sign in to your account
+              Login to your account
             </h2>
             <p className='mt-2 text-center text-sm text-gray-600'>
-              Or{' '}
+            Kindly,{' '}
               <a
-                href='#'
-                className='font-medium text-indigo-600 hover:text-indigo-500'
+                href='https://www.microverse.org/info/terms#:~:text=Microverse%20does%20not%20knowingly%20collect,individual%20and%20is%20non%2Dtransferrable.'
+                className='font-medium text-lime-600 hover:text-lime-700'
               >
-                start your 14-day free trial
+                read our terms and conditions!
               </a>
             </p>
           </div>
