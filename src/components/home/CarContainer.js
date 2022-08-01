@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import CarItem from "../carlist/CarItem"
+import CarItem from '../carlist/CarItem';
 function CarContainer() {
   const { carItems } = useSelector((store) => store.car);
   return (
@@ -11,7 +11,7 @@ function CarContainer() {
         })}
       </div>
     </main>
-  )
-};
+  );
+}
 
 export default CarContainer;
