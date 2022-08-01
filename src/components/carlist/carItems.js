@@ -7,27 +7,25 @@ const carItems = [
   price: "100"
   },
   {
-    user: '2',
+    id: '2',
     name: "honda",
-    description: "HONdA!",
+    description: "fast!",
     picture: "https://tdrresearch.azureedge.net/photos/chrome/Expanded/White/2022HOC020004/2022HOC02000401.jpg",
     price: "150",
-
   },
   {
-    user: "3",
+    id: "3",
     name: "BMW",
     description: "one of the best sportive car",
     picture: "http://clipart-library.com/img/1883029.png",
     price: "300",
   },
   {
-    user: "4",
+    id: "4",
     name: "ford",
     description: "best of sedan",
     picture: "https://crdms.images.consumerreports.org/c_lfill,w_470,q_auto,f_auto/prod/cars/chrome/white/2018FOC120087_1280_01",
     price: "300",
-
   },
 ];
 

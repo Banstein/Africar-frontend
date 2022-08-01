@@ -1,13 +1,13 @@
 import React from 'react';
-import carItem from '../carlist/carItem';
 import { useSelector } from 'react-redux';
+import CarItem from "../carlist/CarItem"
 function CarContainer() {
-  const { carCards } = useSelector((store) => store.car);
+  const { carItems } = useSelector((store) => store.car);
   return (
     <main>
       <div>
-        {carItem.map((item) => {
-          return <carItem key={item.id} {...item} />;
+        {carItems.map((item) => {
+          return <CarItem key={item.id} {...item} />;
         })}
       </div>
     </main>

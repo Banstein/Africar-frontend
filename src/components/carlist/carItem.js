@@ -1,5 +1,4 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
 const carItem = ({ id, name, description, picture, price }) => {
   return (
     <section>
@@ -10,6 +9,6 @@ const carItem = ({ id, name, description, picture, price }) => {
       <button>Remove</button>
     </section>
   )
-}
+};
 
 export default carItem;
