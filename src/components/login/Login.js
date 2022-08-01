@@ -107,7 +107,7 @@ export default function Login() {
               </button>
 
               <div className='text-sm'>
-                <Link className='' to='/singup'>
+                <Link className='' to='/signup'>
                   <p
                     href='#'
                     className='font-medium text-blue-700 hover:text-gray-300 link-to-signup'
