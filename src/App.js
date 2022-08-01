@@ -1,6 +1,5 @@
 import Navbar from './components/Navbar';
 import CarContainer from './components/CarContainer';
-
 import { useDispatch, useSelector } from 'react-redux';
 import { calculateTotals, getCarItems } from './features/car/carSlice';
 import { useEffect } from 'react';
