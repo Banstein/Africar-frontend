@@ -7,7 +7,7 @@ const Navbar = () => {
     <>
       <nav>
         <div className='nav-center'>
-          <h3>redux toolkit</h3>
+          <h3>Africar</h3>
           <div className='nav-container'>
             <CarIcon />
             <div className='amount-container'>

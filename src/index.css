@@ -5,8 +5,8 @@ Variables
 */
 
 :root {
-  --clr-primary: #645cff;
-  --clr-primary-dark: #282566;
+  --clr-primary: #9fbd3b;
+  --clr-primary-dark: #9fbd3b;
   --clr-primary-light: #a29dff;
   --clr-grey-1: #102a42;
   --clr-grey-5: #617d98;
@@ -29,8 +29,8 @@ Variables
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background: var(--clr-grey-10);
-  color: var(--clr-grey-1);
+  background: white;
+  color: black;
   line-height: 1.5;
   font-size: 0.875rem;
 }
@@ -41,29 +41,29 @@ img {
   width: 100%;
   display: block;
 }
+
 h1,
 h2,
 h3,
 h4 {
   letter-spacing: var(--spacing);
-  text-transform: capitalize;
   line-height: 1.25;
   margin-bottom: 0.75rem;
 }
 h1 {
-  font-size: 3rem;
-}
-h2 {
   font-size: 2rem;
 }
+h2 {
+  font-size: 1rem;
+}
 h3 {
-  font-size: 1.5rem;
+  font-size: 0.7rem;
 }
 h4 {
-  font-size: 0.875rem;
+  font-size: 0.5rem;
 }
 p {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.2rem;
 }
 @media screen and (min-width: 800px) {
   h1 {

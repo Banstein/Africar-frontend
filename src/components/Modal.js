@@ -7,7 +7,7 @@ const Modal = () => {
   return (
     <aside className='modal-container'>
       <div className='modal'>
-        <h4>remove all items from your shopping car?</h4>
+        <h4>Are you sure you want to reserve a car?</h4>
         <div className='btn-container'>
           <button
             type='button'
@@ -17,7 +17,7 @@ const Modal = () => {
               dispatch(closeModal());
             }}
           >
-            confirm
+            YES
           </button>
           <button
             type='button'
@@ -26,7 +26,7 @@ const Modal = () => {
               dispatch(closeModal());
             }}
           >
-            cancel
+            NO
           </button>
         </div>
       </div>
