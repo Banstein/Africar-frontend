@@ -8,9 +8,9 @@ import { BsGithub } from 'react-icons/bs';
 import { BsTwitter } from 'react-icons/bs';
 import Logo from '../../assets/afrilogo.png';
 import './landingPage.css';
-import Cards from '../carsCars.js/Cards';
-import CardAudi from '../carsCars.js/CardAudi';
-import CardBenz from '../carsCars.js/CardBenz';
+import Cards from '../carsCards/Cards';
+import CardAudi from '../carsCards/CardAudi';
+import CardBenz from '../carsCards/CardBenz';
 import { Link } from 'react-router-dom';
 
 function LandingPage() {
@@ -39,7 +39,7 @@ function LandingPage() {
             <li className='flex w-full justify-between cursor-pointer items-center text-gray-900 bg-white border border-gray-200 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-300 dark:text-gray-700 dark:border-gray-200 dark:hover:bg-gray-200 dark:hover:border-gray-100 dark:focus:ring-gray-300'>
               <div className='flex items-center'>
                 <AiFillCar />
-                <Link to='/reservation'>
+                <Link to='/carcontainer'>
                   <span className='ml-2 text-sm'>Reserve your car now...</span>
                 </Link>
               </div>
