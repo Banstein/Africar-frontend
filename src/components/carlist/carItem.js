@@ -1,8 +1,8 @@
 import React from 'react'
-const carItem = ({ id, name, description, picture, price }) => {
+const CarItem = ({ id, name, description, picture, price }) => {
   return (
     <section>
-      <img src={picture} alt="Image not loaded" />
+      <img src={picture} alt={name} />
       <h3>{name}</h3>
       <p>${price}</p>
       <p>{description}</p>
@@ -11,4 +11,5 @@ const carItem = ({ id, name, description, picture, price }) => {
   )
 };
 
-export default carItem;
+CarItem.propTypes = myPropTypes;
+export default CarItem;

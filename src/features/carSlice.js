@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import carItems from "../components/carlist/carItems";
 
 const intialState = {
-  carItems: carItems
+  carItems: carItems,
 }
 
 const carSlice = createSlice({
