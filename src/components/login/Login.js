@@ -2,6 +2,7 @@ import React from 'react';
 
 import { LockClosedIcon } from '@heroicons/react/solid';
 import logo from '../../assets/afrilogo.png';
+import { Link } from 'react-router-dom';
 import './login.css';
 
 export default function Login() {
@@ -23,12 +24,12 @@ export default function Login() {
               Login to your account
             </h2>
             <p className='mt-2 text-center text-sm text-gray-600'>
-            Kindly,{' '}
+              Kindly,{' '}
               <a
                 href='https://www.microverse.org/info/terms#:~:text=Microverse%20does%20not%20knowingly%20collect,individual%20and%20is%20non%2Dtransferrable.'
                 className='font-medium text-lime-600 hover:text-lime-700'
               >
-                read our terms and conditions!
+                read our terms and conditions to continue!
               </a>
             </p>
           </div>
@@ -45,7 +46,7 @@ export default function Login() {
                   type='email'
                   autoComplete='email'
                   required
-                  className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm'
+                  className='appearance-none  relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-green-500 focus:border-gray-500 focus:z-10 sm:text-sm'
                   placeholder='Email address'
                 />
               </div>
@@ -59,7 +60,7 @@ export default function Login() {
                   type='password'
                   autoComplete='current-password'
                   required
-                  className='appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 focus:z-10 sm:text-sm'
+                  className='appearance-none  relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm'
                   placeholder='Password'
                 />
               </div>
@@ -71,7 +72,7 @@ export default function Login() {
                   id='remember-me'
                   name='remember-me'
                   type='checkbox'
-                  className='h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded'
+                  className='h-4 w-4 text-gray-700 focus:ring-indigo-500 border-gray-300 rounded'
                 />
                 <label
                   htmlFor='remember-me'
@@ -84,7 +85,7 @@ export default function Login() {
               <div className='text-sm'>
                 <a
                   href='#'
-                  className='font-medium text-indigo-600 hover:text-indigo-500'
+                  className='font-medium text-blue-700 hover:text-gray-300'
                 >
                   Forgot your password?
                 </a>
@@ -94,16 +95,27 @@ export default function Login() {
             <div>
               <button
                 type='submit'
-                className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-gray-600 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
               >
                 <span className='absolute left-0 inset-y-0 flex items-center pl-3'>
                   <LockClosedIcon
-                    className='h-5 w-5 text-indigo-500 group-hover:text-indigo-400'
+                    className='h-5 w-5 text-white group-hover:text-green-600'
                     aria-hidden='true'
                   />
                 </span>
-                Sign in
+                Login
               </button>
+
+              <div className='text-sm'>
+                <Link className='' to='/singup'>
+                  <p
+                    href='#'
+                    className='font-medium text-blue-700 hover:text-gray-300 link-to-signup'
+                  >
+                    do not have an account? Signup
+                  </p>
+                </Link>
+              </div>
             </div>
           </form>
         </div>
