@@ -1,10 +1,3 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import LandingPage from './components/home/landingPage';
-import Login from './components/login/Login';
-import Reservations from './components/reservations/Reservations';
-import Signup from './components/signup/Signup';
-import Index from './components';
 function App() {
   return (
     <Router>

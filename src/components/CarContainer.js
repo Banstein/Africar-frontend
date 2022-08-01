@@ -10,8 +10,8 @@ const CarContainer = () => {
     return (
       <section className='car'>
         <header>
-          <h2>Reservation Form</h2>
-          <h4 className='empty-car'>No reservation done yet</h4>
+          <h2>Cars List</h2>
+          <h4 className='empty-car'>No Cars Available yet</h4>
         </header>
       </section>
     );
@@ -20,7 +20,7 @@ const CarContainer = () => {
   return (
     <section className='car'>
       <header>
-        <h2>Reservation Form</h2>
+        <h2>Cars List</h2>
       </header>
       <div>
         {carItems.map((item) => {
