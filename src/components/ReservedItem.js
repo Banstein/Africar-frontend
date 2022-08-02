@@ -17,7 +17,7 @@ const ReservedItem = ({ id, picture, name, price, description }) => {
             dispatch(removeItem(id));
           }}
         >
-          remove
+          Delete
         </button>
       </div>
     </article>
