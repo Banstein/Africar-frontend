@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { useDispatch, useSelector } from 'react-redux';
 import CarItem from './CarItem';
 import { openModal } from '../features/modal/modalSlice';
@@ -15,9 +16,8 @@ const CarContainer = () => {
       </div>
       <footer>
         <hr />
-        <div className='car-total'>
-        </div>
-        <button className="btn clear-btn" onClick={() => dispatch(openModal())}>
+        <div className="car-total" />
+        <button type="button" className="btn clear-btn" onClick={() => dispatch(openModal())}>
           RESERVATIONS
         </button>
       </footer>

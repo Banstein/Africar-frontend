@@ -5,7 +5,7 @@ function CardAudi() {
   return (
     <div>
       <div className="overflow-hidden rounded shadow-lg my-card">
-        <img src={Car} className="w-full" />
+        <img src={Car} className="w-full" alt="NA" />
         <div className="px-4 py-2">
           <div className="mb-1 text-sm font-bold">Race double gear 4X4</div>
           <span className="text-sm text-gray-700">
