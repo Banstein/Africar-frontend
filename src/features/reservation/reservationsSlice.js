@@ -1,11 +1,13 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { openModal } from '../modal/modalSlice';
+// import { openModal } from '../modal/modalSlice';
 
 const url = 'http://localhost:3000/api/v1/cars';
 
 const initialState = {
   reservations: [],
+  amount: 4,
+  total: 0,
   isLoading: true,
 };
 
@@ -21,7 +23,7 @@ export const getCarItems = createAsyncThunk(
   }
 );
 
-const carSlice = createSlice({
+const reservationSlice = createSlice({
   name: 'reservation',
   initialState,
   reducers: {
@@ -33,17 +35,18 @@ const carSlice = createSlice({
       state.reservations = state.reservations.filter((item) => item.id !== itemId);
     },
     increase: (state, { payload }) => {
-      const numberOfResevation = state.carItems.find((item) => item.id === payload.id);
-      carItem.amount = carItem.amount + 1;
+      const reservation = state.reservations.find((item) => item.id === payload.id);
+      reservation.amount = reservation.amount + 1;
     },
     decrease: (state, { payload }) => {
-      const carItem = state.carItems.find((item) => item.id === payload.id);
-      carItem.amount = carItem.amount - 1;
+      const reservation = state.reservations.find((item) => item.id === payload.id);
+      reservation.amount = reservation.amount - 1;
+
     },
     calculateTotals: (state) => {
       let amount = 0;
       let total = 0;
-      state.carItems.forEach((item) => {
+      state.reservations.forEach((item) => {
         amount += item.amount;
         total += item.amount * item.price;
       });
@@ -52,15 +55,15 @@ const carSlice = createSlice({
     },
   },
   extraReducers: {
-    [getCarItems.pending]: (state) => {
+    [getReservations.pending]: (state) => {
       state.isLoading = true;
     },
-    [getCarItems.fulfilled]: (state, action) => {
+    [getReservations.fulfilled]: (state, action) => {
       // console.log(action);
       state.isLoading = false;
-      state.carItems = action.payload;
+      state.reservations = action.payload;
     },
-    [getCarItems.rejected]: (state, action) => {
+    [getReservations.rejected]: (state, action) => {
       console.log(action);
       state.isLoading = false;
     },
@@ -69,6 +72,6 @@ const carSlice = createSlice({
 
 // console.log(carSlice);
 export const { clearCar, removeItem, increase, decrease, calculateTotals } =
-  carSlice.actions;
+reservationSlice.actions;
 
-export default carSlice.reducer;
+export default reservationSlice.reducer;
