@@ -15,8 +15,7 @@ const CarContainer = () => {
       </div>
       <footer>
         <hr />
-        <div className='car-total'>
-        </div>
+        <div className="car-total" />
         <button className="btn clear-btn" onClick={() => dispatch(openModal())}>
           RESERVATIONS
         </button>

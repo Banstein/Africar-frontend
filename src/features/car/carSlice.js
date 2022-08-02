@@ -50,7 +50,6 @@ const carSlice = createSlice({
 });
 
 // console.log(carSlice);
-export const { clearCar, removeItem } =
-  carSlice.actions;
+export const { clearCar, removeItem } = carSlice.actions;
 
 export default carSlice.reducer;
