@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
+import { useDispatch, useSelector } from 'react-redux';
 import Navbar from './Navbar';
 import CarContainer from './CarContainer';
 
-import { useDispatch, useSelector } from 'react-redux';
 import { calculateTotals, getCarItems } from '../features/car/carSlice';
-import { useEffect } from 'react';
 import Modal from './Modal';
 
 function Index() {
@@ -23,7 +22,7 @@ function Index() {
 
   if (isLoading) {
     return (
-      <div className='loading'>
+      <div className="loading">
         <h1>Loading...</h1>
       </div>
     );
