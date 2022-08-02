@@ -17,6 +17,7 @@ const CarItem = ({
           {price}
         </h4>
         <button
+          type="buttton"
           className="remove-btn"
           onClick={() => {
             dispatch(removeItem(id));

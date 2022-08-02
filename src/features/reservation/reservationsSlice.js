@@ -28,7 +28,7 @@ const reservationSlice = createSlice({
   initialState,
   reducers: {
     clearCar: (state) => {
-      state.reservationsState = [];
+      state.reservationState = [];
     },
     removeItem: (state, action) => {
       const itemId = action.payload;
@@ -63,7 +63,6 @@ const reservationSlice = createSlice({
       state.reservations = action.payload;
     },
     [getReservations.rejected]: (state, action) => {
-      console.log(action);
       state.isLoading = false;
     },
   },

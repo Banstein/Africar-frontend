@@ -17,6 +17,7 @@ const ReservedItem = ({
           {price}
         </h4>
         <button
+          type="button"
           className="remove-btn"
           onClick={() => {
             dispatch(removeItem(id));

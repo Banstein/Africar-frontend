@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import ReservedItem from './ReservedItem';
 import { openModal } from '../features/modal/modalSlice';
+import ReservedItem from './ReservedItem';
 
 const ReservedContainer = () => {
   const dispatch = useDispatch();

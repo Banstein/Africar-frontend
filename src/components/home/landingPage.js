@@ -178,7 +178,7 @@ function LandingPage() {
             <li className="flex items-center justify-between w-full mb-6 text-gray-600 cursor-pointer hover:text-gray-500">
               <div className="flex items-center">
                 <AiFillCar />
-                <Link to="/reservation" />
+                <Link to="/reservedcontainer" />
                 <span className="ml-2 text-sm">Reservation</span>
               </div>
             </li>
