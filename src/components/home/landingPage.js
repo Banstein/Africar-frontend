@@ -1,8 +1,3 @@
-/* eslint-disable no-trailing-spaces */
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
-/* eslint-disable jsx-a11y/alt-text */
-/* eslint-disable max-len */
 import React from 'react';
 import { FaBeer } from 'react-icons/fa';
 import { GrUserExpert, GrUserSettings, GrUserAdd } from 'react-icons/gr';

@@ -1,6 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import { LockClosedIcon } from '@heroicons/react/solid';
 import { Link } from 'react-router-dom';
