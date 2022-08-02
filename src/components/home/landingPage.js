@@ -19,7 +19,6 @@ function LandingPage() {
       {/* Sidebar starts */}
       {/* Remove class [ hidden ] and replace [ sm:flex ] with [ flex ] */}
       {/* --------------------------------------------HEADER----------logo-------SIDEBAR--------------------*/}
-
       <div className="absolute flex-col justify-between hidden min-h-screen shadow w-84 sm:relative bg-white-200 md:h-full sm:flex">
         <div className="px-8 py-8 ">
           <div className="flex items-center w-full h-16">
@@ -179,7 +178,7 @@ function LandingPage() {
             <li className="flex items-center justify-between w-full mb-6 text-gray-600 cursor-pointer hover:text-gray-500">
               <div className="flex items-center">
                 <AiFillCar />
-                <Link to="/reservation" />
+                <Link to="/reservedcontainer" />
                 <span className="ml-2 text-sm">Reservation</span>
               </div>
             </li>
