@@ -20,7 +20,7 @@ export const getCarItems = createAsyncThunk(
     } catch (error) {
       return thunkAPI.rejectWithValue('something went wrong');
     }
-  }
+  },
 );
 
 const carSlice = createSlice({
@@ -36,11 +36,11 @@ const carSlice = createSlice({
     },
     increase: (state, { payload }) => {
       const carItem = state.carItems.find((item) => item.id === payload.id);
-      carItem.amount = carItem.amount + 1;
+      carItem.amount += 1;
     },
     decrease: (state, { payload }) => {
       const carItem = state.carItems.find((item) => item.id === payload.id);
-      carItem.amount = carItem.amount - 1;
+      carItem.amount -= 1;
     },
     calculateTotals: (state) => {
       let amount = 0;
@@ -70,7 +70,8 @@ const carSlice = createSlice({
 });
 
 // console.log(carSlice);
-export const { clearCar, removeItem, increase, decrease, calculateTotals } =
-  carSlice.actions;
+export const {
+  clearCar, removeItem, increase, decrease, calculateTotals,
+} = carSlice.actions;
 
 export default carSlice.reducer;
