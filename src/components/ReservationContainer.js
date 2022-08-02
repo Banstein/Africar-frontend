@@ -1,40 +1,43 @@
-import ReservedItem from './ReservedItem';
 import { useDispatch, useSelector } from 'react-redux';
+import ReservedItem from './ReservedItem';
 import { openModal } from '../features/modal/modalSlice';
 
 const ReservedContainer = () => {
   const dispatch = useDispatch();
-  const {reservedItems, total, amount } = useSelector((store) => store.reservation);
+  const { reservedItems, total, amount } = useSelector((store) => store.reservation);
 
   if (amount < 1) {
     return (
-      <section className='car'>
+      <section className="car">
         <header>
           <h2>Reserved</h2>
-          <h4 className='empty-car'>No Car Reserved Yet</h4>
+          <h4 className="empty-car">No Car Reserved Yet</h4>
         </header>
       </section>
     );
   }
 
   return (
-    <section className='car'>
+    <section className="car">
       <header>
         <h2>Reserved Car List</h2>
       </header>
       <div>
-        {reservedItems.map((item) => {
-          return <ReservedItem key={item.id} {...item} />;
-        })}
+        {reservedItems.map((item) => <ReservedItem key={item.id} {...item} />)}
       </div>
       <footer>
         <hr />
-        <div className='car-total'>
+        <div className="car-total">
           <h4>
-            total <span>${total.toFixed(2)}</span>
+            total
+            {' '}
+            <span>
+              $
+              {total.toFixed(2)}
+            </span>
           </h4>
         </div>
-        <button className='btn clear-btn' onClick={() => dispatch(openModal())}>
+        <button className="btn clear-btn" onClick={() => dispatch(openModal())}>
           RESERVATIONS
         </button>
       </footer>

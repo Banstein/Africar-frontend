@@ -20,7 +20,7 @@ export const getReservations = createAsyncThunk(
     } catch (error) {
       return thunkAPI.rejectWithValue('something went wrong');
     }
-  }
+  },
 );
 
 const reservationSlice = createSlice({
@@ -36,12 +36,11 @@ const reservationSlice = createSlice({
     },
     increase: (state, { payload }) => {
       const reservation = state.reservations.find((item) => item.id === payload.id);
-      reservation.amount = reservation.amount + 1;
+      reservation.amount += 1;
     },
     decrease: (state, { payload }) => {
       const reservation = state.reservations.find((item) => item.id === payload.id);
-      reservation.amount = reservation.amount - 1;
-
+      reservation.amount -= 1;
     },
     calculateTotals: (state) => {
       let amount = 0;
@@ -71,7 +70,8 @@ const reservationSlice = createSlice({
 });
 
 // console.log(carSlice);
-export const { clearCar, removeItem, increase, decrease, calculateTotals } =
-reservationSlice.actions;
+export const {
+  clearCar, removeItem, increase, decrease, calculateTotals,
+} = reservationSlice.actions;
 
 export default reservationSlice.reducer;
