@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
-import { ChevronDown, ChevronUp } from './icons';
-import { removeItem, increase, decrease } from '../features/car/carSlice';
 import { useDispatch } from 'react-redux';
+import { removeItem } from '../features/car/carSlice';
 
 const CarItem = ({ id, picture, name, price, description }) => {
   const dispatch = useDispatch();

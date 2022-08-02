@@ -18,7 +18,7 @@ export const getCarItems = createAsyncThunk(
     } catch (error) {
       return thunkAPI.rejectWithValue('something went wrong');
     }
-  }
+  },
 );
 
 const carSlice = createSlice({
