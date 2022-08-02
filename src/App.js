@@ -1,39 +1,22 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import Navbar from './components/Navbar';
-import ReservedContainer from './components/ReservationContainer';
-import CarContainer from './components/CarContainer';
-import { calculateTotals, getCarItems } from './features/car/carSlice';
-import Modal from './components/Modal';
+/* eslint-disable jsx-quotes */
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LandingPage from './components/home/landingPage';
+import Login from './components/login/Login';
+import Signup from './components/signup/Signup';
+import Index from './components';
 
 function App() {
-  const { carItems, isLoading } = useSelector((store) => store.car);
-  const { isOpen } = useSelector((store) => store.modal);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(calculateTotals());
-  }, [carItems]);
-
-  useEffect(() => {
-    dispatch(getCarItems('random'));
-  }, []);
-
-  if (isLoading) {
-    return (
-      <div className="loading">
-        <h1>Loading...</h1>
-      </div>
-    );
-  }
-
   return (
-    <main>
-      {isOpen && <Modal />}
-      <Navbar />
-      <CarContainer />
-      <ReservedContainer />
-    </main>
+    <Router>
+      <Routes>
+        <Route path='/landingpage' element={<LandingPage />} />
+        <Route exact path='/login' element={<Login />} />
+        <Route path='/signup' element={<Signup />} />
+        <Route path='/' element={<Index />} />
+        {/* <Route path='/reservation' element={<Reservation />}></Route> */}
+      </Routes>
+    </Router>
   );
 }
 export default App;

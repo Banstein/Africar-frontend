@@ -1,7 +1,11 @@
 /* eslint-disable react/prop-types */
 import { useDispatch } from 'react-redux';
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from './icons';
 import { removeItem, increase, decrease } from '../features/car/carSlice';
+=======
+import { removeItem } from '../features/car/carSlice';
+>>>>>>> 627a70827361a847c2e6a3fe6e43faaa95ae2018
 
 const CarItem = ({
   id, picture, name, price, description,

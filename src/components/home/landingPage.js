@@ -2,6 +2,7 @@ import React from 'react';
 import { FaBeer } from 'react-icons/fa';
 import { GrUserExpert, GrUserSettings, GrUserAdd } from 'react-icons/gr';
 import { AiFillCar } from 'react-icons/ai';
+<<<<<<< HEAD
 
 import { BsGithub, BsTwitter } from 'react-icons/bs';
 
@@ -10,6 +11,15 @@ import './landingPage.css';
 import Cards from '../carsCars.js/Cards';
 import CardAudi from '../carsCars.js/CardAudi';
 import CardBenz from '../carsCars.js/CardBenz';
+=======
+import { BsGithub, BsTwitter } from 'react-icons/bs';
+import { Link } from 'react-router-dom';
+import Logo from '../../assets/afrilogo.png';
+import './landingPage.css';
+import Cards from '../carsCards/Cards';
+import CardAudi from '../carsCards/CardAudi';
+import CardBenz from '../carsCards/CardBenz';
+>>>>>>> 627a70827361a847c2e6a3fe6e43faaa95ae2018
 
 function LandingPage() {
   const sidebarHandler = () => {
@@ -20,6 +30,10 @@ function LandingPage() {
       {/* Sidebar starts */}
       {/* Remove class [ hidden ] and replace [ sm:flex ] with [ flex ] */}
       {/* --------------------------------------------HEADER----------logo-------SIDEBAR--------------------*/}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 627a70827361a847c2e6a3fe6e43faaa95ae2018
       <div className="absolute flex-col justify-between hidden min-h-screen shadow w-84 sm:relative bg-white-200 md:h-full sm:flex">
         <div className="px-8 py-8 ">
           <div className="flex items-center w-full h-16">
@@ -37,7 +51,13 @@ function LandingPage() {
             <li className="flex w-full justify-between cursor-pointer items-center text-gray-900 bg-white border border-gray-200 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-300 dark:text-gray-700 dark:border-gray-200 dark:hover:bg-gray-200 dark:hover:border-gray-100 dark:focus:ring-gray-300">
               <div className="flex items-center">
                 <AiFillCar />
+<<<<<<< HEAD
                 <span className="ml-2 text-sm">Reserve your car now...</span>
+=======
+                <Link to="/carcontainer">
+                  <span className="ml-2 text-sm">Reserve your car now...</span>
+                </Link>
+>>>>>>> 627a70827361a847c2e6a3fe6e43faaa95ae2018
               </div>
             </li>
             <li className=" w-full justify-between cursor-pointer item-center flex items-center text-gray-900 bg-white border border-gray-200 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-300 dark:text-gray-700 dark:border-gray-200 dark:hover:bg-gray-200 dark:hover:border-gray-100 dark:focus:ring-gray-300">
@@ -46,6 +66,7 @@ function LandingPage() {
                 <span className="ml-1 text-sm">Car Maintenance serv...</span>
               </div>
             </li>
+<<<<<<< HEAD
             <li className="flex items-center justify-between w-full mb-6 text-gray-600 cursor-pointer hover:text-gray-500">
               <div className="flex items-center text-gray-900 bg-white border border-gray-200 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-300 dark:text-gray-700 dark:border-gray-200 dark:hover:bg-gray-200 dark:hover:border-gray-100 dark:focus:ring-gray-300">
                 <GrUserExpert />
@@ -54,6 +75,21 @@ function LandingPage() {
               <div className="flex items-center text-gray-900 bg-white border border-gray-200 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-300 dark:text-gray-700 dark:border-gray-200 dark:hover:bg-gray-200 dark:hover:border-gray-100 dark:focus:ring-gray-300">
                 <GrUserAdd />
                 <span className="ml-2 text-sm ">Signup</span>
+=======
+
+            <li className="flex items-center justify-between w-full mb-6 text-gray-600 cursor-pointer hover:text-gray-500">
+              <div className="flex items-center text-gray-900 bg-white border border-gray-200 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-300 dark:text-gray-700 dark:border-gray-200 dark:hover:bg-gray-200 dark:hover:border-gray-100 dark:focus:ring-gray-300">
+                <GrUserExpert />
+                <Link to="/login">
+                  <span className="ml-2 text-sm ">Login</span>
+                </Link>
+              </div>
+              <div className="flex items-center text-gray-900 bg-white border border-gray-200 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-300 dark:text-gray-700 dark:border-gray-200 dark:hover:bg-gray-200 dark:hover:border-gray-100 dark:focus:ring-gray-300">
+                <GrUserAdd />
+                <Link to="/signup">
+                  <span className="ml-2 text-sm ">Signup</span>
+                </Link>
+>>>>>>> 627a70827361a847c2e6a3fe6e43faaa95ae2018
               </div>
             </li>
           </ul>
@@ -172,6 +208,10 @@ function LandingPage() {
             <li className="flex items-center justify-between w-full mb-6 text-gray-600 cursor-pointer hover:text-gray-500">
               <div className="flex items-center">
                 <AiFillCar />
+<<<<<<< HEAD
+=======
+                <Link to="/reservation" />
+>>>>>>> 627a70827361a847c2e6a3fe6e43faaa95ae2018
                 <span className="ml-2 text-sm">Reservation</span>
               </div>
             </li>

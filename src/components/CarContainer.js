@@ -4,6 +4,7 @@ import { openModal } from '../features/modal/modalSlice';
 
 const CarContainer = () => {
   const dispatch = useDispatch();
+<<<<<<< HEAD
   const { carItems, total, amount } = useSelector((store) => store.car);
 
   if (amount < 1) {
@@ -17,6 +18,9 @@ const CarContainer = () => {
     );
   }
 
+=======
+  const { carItems } = useSelector((store) => store.car);
+>>>>>>> 627a70827361a847c2e6a3fe6e43faaa95ae2018
   return (
     <section className="car">
       <header>
@@ -27,6 +31,7 @@ const CarContainer = () => {
       </div>
       <footer>
         <hr />
+<<<<<<< HEAD
         <div className="car-total">
           <h4>
             total
@@ -36,6 +41,9 @@ const CarContainer = () => {
               {total.toFixed(2)}
             </span>
           </h4>
+=======
+        <div className='car-total'>
+>>>>>>> 627a70827361a847c2e6a3fe6e43faaa95ae2018
         </div>
         <button className="btn clear-btn" onClick={() => dispatch(openModal())}>
           RESERVATIONS

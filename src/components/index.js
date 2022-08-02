@@ -1,0 +1,32 @@
+import Navbar from './Navbar';
+import CarContainer from './CarContainer';
+import { useDispatch, useSelector } from 'react-redux';
+import { getCarItems } from '../features/car/carSlice';
+import { useEffect } from 'react';
+import Modal from './Modal';
+function App() {
+  const { isLoading } = useSelector((store) => store.car);
+  const { isOpen } = useSelector((store) => store.modal);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getCarItems());
+  }, []);
+
+  if (isLoading) {
+    return (
+      <div className='loading'>
+        <h1>Loading...</h1>
+      </div>
+    );
+  }
+
+  return (
+    <main>
+      {isOpen && <Modal />}
+      <Navbar />
+      <CarContainer />
+    </main>
+  );
+}
+export default App;
