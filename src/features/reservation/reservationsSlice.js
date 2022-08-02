@@ -11,7 +11,7 @@ const initialState = {
   isLoading: true,
 };
 
-export const getCarItems = createAsyncThunk(
+export const getReservations = createAsyncThunk(
   'reservation/getReservations',
   async (name, thunkAPI) => {
     try {
