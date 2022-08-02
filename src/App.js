@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar';
+import ReservedContainer from './components/ReservationContainer';
 import CarContainer from './components/CarContainer';
 import { useDispatch, useSelector } from 'react-redux';
 import { calculateTotals, getCarItems } from './features/car/carSlice';
@@ -30,6 +31,7 @@ function App() {
       {isOpen && <Modal />}
       <Navbar />
       <CarContainer />
+      <ReservedContainer />
     </main>
   );
 }

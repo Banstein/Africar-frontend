@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
-import { removeItem } from '../features/reservation/reservationSlice';
 import { useDispatch } from 'react-redux';
+import { removeItem } from '../features/reservation/reservationsSlice';
 
 const ReservedItem = ({ id, picture, name, price, description }) => {
   const dispatch = useDispatch();
