@@ -28,4 +28,21 @@ body {
   border-radius: 8px;
   padding: 2rem;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  position: absolute;
+
+}
+
+.vehicle-image {
+  position: relative;
+  display: flex;
+  background-color: #f2f2f2;
+  position: absolute;
+}
+
+.vehicle-image img {
+  width: 100%;
+  object-fit: contain;
+  margin-left: -5rem;
+  margin-top: 8rem;
+
 }
