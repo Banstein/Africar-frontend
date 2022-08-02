@@ -1,42 +1,32 @@
-import React, { useEffect } from 'react';
-
+import Navbar from './components/Navbar';
+import CarContainer from './components/CarContainer';
 import { useDispatch, useSelector } from 'react-redux';
-import Navbar from './Navbar';
-import CarContainer from './CarContainer';
-
-import { calculateTotals, getCarItems } from '../features/car/carSlice';
-import Modal from './Modal';
-
-function Index() {
-  const { carItems, isLoading } = useSelector((store) => store.car);
+import { getCarItems } from './features/car/carSlice';
+import { useEffect } from 'react';
+import Modal from './components/Modal';
+function App() {
+  const { isLoading } = useSelector((store) => store.car);
   const { isOpen } = useSelector((store) => store.modal);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(calculateTotals());
-  }, [carItems]);
-
-  useEffect(() => {
-    dispatch(getCarItems('random'));
+    dispatch(getCarItems());
   }, []);
 
   if (isLoading) {
     return (
-      <div className="loading">
+      <div className='loading'>
         <h1>Loading...</h1>
       </div>
     );
   }
 
   return (
-    <div>
-      <main>
-        {isOpen && <Modal />}
-        <Navbar />
-        <CarContainer />
-      </main>
-    </div>
+    <main>
+      {isOpen && <Modal />}
+      <Navbar />
+      <CarContainer />
+    </main>
   );
 }
-
-export default Index;
+export default App;
