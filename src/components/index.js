@@ -1,9 +1,9 @@
-import Navbar from './components/Navbar';
-import CarContainer from './components/CarContainer';
+import Navbar from './Navbar';
+import CarContainer from './CarContainer';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCarItems } from './features/car/carSlice';
+import { getCarItems } from '../features/car/carSlice';
 import { useEffect } from 'react';
-import Modal from './components/Modal';
+import Modal from './Modal';
 function App() {
   const { isLoading } = useSelector((store) => store.car);
   const { isOpen } = useSelector((store) => store.modal);
