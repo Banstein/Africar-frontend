@@ -5,7 +5,7 @@ function Cards() {
   return (
     <div>
       <div className="my-card rounded overflow-hidden shadow-lg">
-        <img src={Car} className="w-full" />
+        <img src={Car} className="w-full" alt="missing" />
         <div className="px-4 py-2">
           <div className="font-bold text-sm mb-1">Audi 4X4</div>
           <span className="text-gray-700 text-sm">
