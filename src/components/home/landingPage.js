@@ -1,5 +1,6 @@
+/* eslint-disable max-len */
+// import { FaBeer } from 'react-icons/fa';
 import React from 'react';
-import { FaBeer } from 'react-icons/fa';
 import { GrUserExpert, GrUserSettings, GrUserAdd } from 'react-icons/gr';
 import { AiFillCar } from 'react-icons/ai';
 import { BsGithub, BsTwitter } from 'react-icons/bs';
@@ -11,9 +12,9 @@ import CardAudi from '../carsCards/CardAudi';
 import CardBenz from '../carsCards/CardBenz';
 
 function LandingPage() {
-  const sidebarHandler = () => {
-    e.preventDefault();
-  };
+  // const sidebarHandler = () => {
+  //   e.preventDefault();
+  // };
   return (
     <div className="flex flex-no-wrap">
       {/* Sidebar starts */}
@@ -23,7 +24,7 @@ function LandingPage() {
       <div className="absolute flex-col justify-between hidden min-h-screen shadow w-84 sm:relative bg-white-200 md:h-full sm:flex">
         <div className="px-8 py-8 ">
           <div className="flex items-center w-full h-16">
-            <img src={Logo} className="afrilogo" />
+            <img src={Logo} className="afrilogo" alt="NA" />
           </div>
           {/* --------------------------------------------HEADER----logo---------------------------------*/}
 
