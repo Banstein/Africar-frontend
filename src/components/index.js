@@ -32,7 +32,7 @@ function Index() {
     <div>
       <main>
         {isOpen && <Modal />}
-        <Navbar />
+        {/* <Navbar /> */}
         <CarContainer />
       </main>
     </div>
