@@ -30,4 +30,5 @@ const CarItem = ({ car }) => {
     </article>
   );
 };
+
 export default CarItem;
