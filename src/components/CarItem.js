@@ -1,15 +1,16 @@
 /* eslint-disable react/prop-types */
 import { useDispatch } from 'react-redux';
 import { removeItem } from '../features/car/carSlice';
+import '../app.css';
 
 const CarItem = ({
   id, picture, name, price, description,
 }) => {
   const dispatch = useDispatch();
   return (
-    <article className="car-item">
+    <article className="flex w-full car-item">
       <img src={picture} alt={name} />
-      <div>
+      <div className='mr-6 bg-red-200 car-title'>
         <h4>{name}</h4>
         <p>{description}</p>
         <h4 className="item-price">

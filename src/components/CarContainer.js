@@ -1,59 +1,18 @@
-import { useDispatch, useSelector } from 'react-redux';
-import CarItem from './CarItem';
-import { openModal } from '../features/modal/modalSlice';
 import { GrUserExpert, GrUserSettings, GrUserAdd } from 'react-icons/gr';
 import { AiFillCar } from 'react-icons/ai';
 import { BsGithub, BsTwitter } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import Logo from '../assets/afrilogo.png';
-import '../components/home/landingPage.css';
-import Cards from './carsCards/Cards';
-import CardAudi from './carsCards/CardAudi';
-import CardBenz from './carsCards/CardBenz';
-
+import ItemSingleCar from './ItemSingleCar';
 import './index.css';
 
 const CarContainer = (e) => {
   const sidebarHandler = () => {
     e.preventDefault();
   };
-  // const dispatch = useDispatch();
-  // const { carItems, total, amount } = useSelector((store) => store.car);
-
-  // if (amount < 1) {
-  //   return (
-  //     <section className="car">
-  //       <header>
-  //         <h2>Cars List</h2>
-  //         <h4 className="empty-car">No Cars Available yet</h4>
-  //       </header>
-  //     </section>
-  //   );
-  // }
 
   return (
     <section className='car'>
-      {/* <header>
-        <h2>Cars List</h2>
-      </header>
-      <div>
-        {carItems.map((item) => <CarItem key={item.id} {...item} />)}
-      </div>
-      <footer>
-        <hr />
-        <div className="car-total">
-          <h4>
-            total
-            <span>
-              $
-              {total.toFixed(2)}
-            </span>
-          </h4>
-        </div>
-        <button className="btn clear-btn" onClick={() => dispatch(openModal())}>
-          RESERVATIONS
-        </button>
-      </footer> */}
 
       {/* ----------------CAR LIST PAGE ------------------*/}
 
@@ -321,13 +280,7 @@ const CarContainer = (e) => {
           </div>
           <div className='content'>
             <div className='items'>
-              <Cards />
-            </div>
-            <div className='items'>
-              <CardAudi />
-            </div>
-            <div className='items'>
-              <CardBenz />
+              <ItemSingleCar />
             </div>
           </div>
         </div>
