@@ -1,47 +1,43 @@
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { openModal } from '../features/modal/modalSlice';
 import ReservedItem from './ReservedItem';
 
 const ReservedContainer = () => {
-  const dispatch = useDispatch();
-  const { reservedItems, total, amount } = useSelector((store) => store.reservation);
 
-  if (amount < 1) {
-    return (
-      <section className="car">
-        <header>
-          <h2>Reserved</h2>
-          <h4 className="empty-car">No Car Reserved Yet</h4>
-        </header>
-      </section>
-    );
-  }
+  const [reservedItems, setReservedItems] = useState([]);
+  const user = useSelector(state => state.user);
+  useEffect(() => {
+    (async () => {
+      const response = await fetch(`https://serene-oasis-96216.herokuapp.com/api/reservations/${user.id}`);
+      const data = await response.json();
+      setReservedItems(data);
+    }
+    )();
+  }, []);
 
   return (
-    <section className="car">
-      <header>
-        <h2>Reserved Car List</h2>
-      </header>
-      <div>
-        {reservedItems.map((item) => <ReservedItem key={item.id} {...item} />)}
-      </div>
-      <footer>
-        <hr />
-        <div className="car-total">
-          <h4>
-            total
-            {' '}
-            <span>
-              $
-              {total.toFixed(2)}
-            </span>
-          </h4>
-        </div>
-        <button className="btn clear-btn" onClick={() => dispatch(openModal())}>
-          RESERVATIONS
-        </button>
-      </footer>
+    <section className="h-full flex flex-col items-center justify-center">
+      <h2 className="text-center text-3xl font-bold">Your Reservations</h2>
+      <table className="sm:w- full-width">
+        <thead>
+          <tr>
+            <th>City</th>
+            <th>Name</th>
+            <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+          {reservedItems.map((item) => (
+            <tr key={item.id}>
+              <td>{item.city}</td>
+              <td>{item.name}</td>
+              <td>{item.date}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </section>
   );
-};
+}; 
 export default ReservedContainer;
