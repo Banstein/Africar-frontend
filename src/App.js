@@ -6,6 +6,7 @@ import Login from './components/login/Login';
 import Signup from './components/signup/Signup';
 import Index from './components';
 import CarDetails from './components/CarDetails';
+import ReservedContainer from './components/ReservationContainer';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/cars' element={<Index />} />
         <Route path='/cars/:id' element={<CarDetails />} />
-        {/* <Route path='/reservation' element={<Reservation />}></Route> */}
+        <Route path='/reservation' element={<ReservedContainer />} />
       </Routes>
     </Router>
   );

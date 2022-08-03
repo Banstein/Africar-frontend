@@ -23,11 +23,13 @@ function App() {
   }
 
   return (
-    <main>
-      {isOpen && <Modal />}
-      <Navbar />
-      <CarContainer />
-    </main>
+    <div>
+      <main>
+        {isOpen && <Modal />}
+        {/* <Navbar /> */}
+        <CarContainer />
+      </main>
+    </div>
   );
 }
 export default App;
