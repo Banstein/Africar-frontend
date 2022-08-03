@@ -16,18 +16,20 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className="loading">
+      <div className='loading'>
         <h1>Loading...</h1>
       </div>
     );
   }
 
   return (
-    <main>
-      {isOpen && <Modal />}
-      <Navbar />
-      <CarContainer />
-    </main>
+    <div>
+      <main>
+        {isOpen && <Modal />}
+        {/* <Navbar /> */}
+        <CarContainer />
+      </main>
+    </div>
   );
 }
 export default App;
