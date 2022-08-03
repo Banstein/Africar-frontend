@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { LockClosedIcon } from '@heroicons/react/solid';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/afrilogo.png';
+import Hand from '../../assets/hand.png';
+
 import './signup.css';
 
 function Signup() {
@@ -15,14 +17,15 @@ function Signup() {
       <body class="h-full">
       ```
     */}
-      <div className='min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 content-center'>
-        <div className='max-w-md w-full space-y-8  py-4 px-6'>
+      <div className='elements'>  
+      <div className='flex items-center content-center justify-center min-h-full px-4 py-12 sm:px-6 lg:px-8'>
+        <div className='w-full max-w-md px-6 py-4 space-y-8'>
           <div>
-            <img className='mx-auto h-20 w-auto' src={logo} alt='Workflow' />
-            <h2 className='mt-6 text-center text-3xl font-extrabold text-gray-900'>
+            <img className='w-auto h-20 mx-auto' src={logo} alt='Workflow' />
+            <h2 className='mt-6 text-3xl font-extrabold text-center text-gray-900'>
               Create your account
             </h2>
-            <p className='mt-2 text-center text-sm text-gray-600'>
+            <p className='mt-2 text-sm text-center text-gray-600'>
               Kindly,
               <a
                 href='https://www.microverse.org/info/terms#:~:text=Microverse%20does%20not%20knowingly%20collect,individual%20and%20is%20non%2Dtransferrable.'
@@ -34,7 +37,7 @@ function Signup() {
           </div>
           <form className='mt-8 space-y-6 login-form' action='#' method='POST'>
             <input type='hidden' name='remember' defaultValue='true' />
-            <div className='rounded-md shadow-sm -space-y-px'>
+            <div className='-space-y-px rounded-md shadow-sm'>
               <div>
                 <label htmlFor='email-address' className='sr-only'>
                   Email address
@@ -45,7 +48,7 @@ function Signup() {
                   type='email'
                   autoComplete='email'
                   required
-                  className='appearance-none  relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-green-500 focus:border-gray-500 focus:z-10 sm:text-sm'
+                  className='relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-green-500 focus:border-gray-500 focus:z-10 sm:text-sm'
                   placeholder='Email address'
                 />
               </div>
@@ -59,7 +62,7 @@ function Signup() {
                   type='password'
                   autoComplete='current-password'
                   required
-                  className='appearance-none  relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm'
+                  className='relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm'
                   placeholder='Password'
                 />
               </div>
@@ -73,7 +76,7 @@ function Signup() {
                   type='password'
                   autoComplete='current-password'
                   required
-                  className='appearance-none  relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900  focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm'
+                  className='relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm'
                   placeholder='Confirm Password'
                 />
               </div>
@@ -85,11 +88,11 @@ function Signup() {
                   id='remember-me'
                   name='remember-me'
                   type='checkbox'
-                  className='h-4 w-4 text-gray-700 focus:ring-indigo-500 border-gray-300 rounded'
+                  className='w-4 h-4 text-gray-700 border-gray-300 rounded focus:ring-indigo-500'
                 />
                 <label
                   htmlFor='remember-me'
-                  className='ml-2 block text-sm text-gray-900'
+                  className='block ml-2 text-sm text-gray-900'
                 >
                   Remember me
                 </label>
@@ -108,11 +111,11 @@ function Signup() {
             <div>
               <button
                 type='submit'
-                className='group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-gray-600 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                className='relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-gray-600 border border-transparent rounded-md group hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
               >
-                <span className='absolute left-0 inset-y-0 flex items-center pl-3'>
+                <span className='absolute inset-y-0 left-0 flex items-center pl-3'>
                   <LockClosedIcon
-                    className='h-5 w-5 text-white group-hover:text-green-600'
+                    className='w-5 h-5 text-white group-hover:text-green-600'
                     aria-hidden='true'
                   />
                 </span>
@@ -133,6 +136,8 @@ function Signup() {
           </form>
         </div>
       </div>
+      </div>
+      
     </>
   );
 }

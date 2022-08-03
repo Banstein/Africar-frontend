@@ -17,12 +17,14 @@ export default function Login() {
         <body class="h-full">
         ```
       */}
-      <div className='flex '>
-        <div className='vehicle-image'>
-          <img src={Vehicle} className='girl-image' />
+      <div className='flex'>
+        <div className='flex justify-between w-screen vehicle-image'>
+          <div className='flex w-full h-full col-auto girl-image'>
+            <img src={Vehicle} className='object-cover w-8/12 h-50' />
+          </div>
         </div>
-        <div className='flex items-center justify-center min-h-full px-4 py-12 sm:px-6 lg:px-8'>
-          <div className='w-full max-w-md space-y-8'>
+        <div className='absolute flex items-center justify-center min-h-full px-4 py-12 sm:px-6 lg:px-8'>
+          <div className='w-full max-w-md space-y-8 '>
             <div>
               <img className='w-auto h-20 mx-auto' src={logo} alt='Workflow' />
               <h2 className='mt-6 text-3xl font-extrabold text-center text-gray-900'>
