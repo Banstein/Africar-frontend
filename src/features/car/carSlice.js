@@ -6,8 +6,6 @@ const url = 'http://localhost:3000/api/v1/cars';
 
 const initialState = {
   carItems: [],
-  amount: 4,
-  total: 0,
   isLoading: true,
 };
 
@@ -34,24 +32,6 @@ const carSlice = createSlice({
       const itemId = action.payload;
       state.carItems = state.carItems.filter((item) => item.id !== itemId);
     },
-    increase: (state, { payload }) => {
-      const carItem = state.carItems.find((item) => item.id === payload.id);
-      carItem.amount += 1;
-    },
-    decrease: (state, { payload }) => {
-      const carItem = state.carItems.find((item) => item.id === payload.id);
-      carItem.amount -= 1;
-    },
-    calculateTotals: (state) => {
-      let amount = 0;
-      let total = 0;
-      state.carItems.forEach((item) => {
-        amount += item.amount;
-        total += item.amount * item.price;
-      });
-      state.amount = amount;
-      state.total = total;
-    },
   },
   extraReducers: {
     [getCarItems.pending]: (state) => {
@@ -70,8 +50,6 @@ const carSlice = createSlice({
 });
 
 // console.log(carSlice);
-export const {
-  clearCar, removeItem, increase, decrease, calculateTotals,
-} = carSlice.actions;
+export const { clearCar, removeItem } = carSlice.actions;
 
 export default carSlice.reducer;

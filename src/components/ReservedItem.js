@@ -1,13 +1,13 @@
 /* eslint-disable react/prop-types */
 import { useDispatch } from 'react-redux';
-import { removeItem } from '../features/car/carSlice';
+import { removeItem } from '../features/reservation/reservationsSlice';
 
-const CarItem = ({
+const ReservedItem = ({
   id, picture, name, price, description,
 }) => {
   const dispatch = useDispatch();
   return (
-    <article className="car-item">
+    <article className="reservation-item">
       <img src={picture} alt={name} />
       <div>
         <h4>{name}</h4>
@@ -17,16 +17,16 @@ const CarItem = ({
           {price}
         </h4>
         <button
-          type="buttton"
+          type="button"
           className="remove-btn"
           onClick={() => {
             dispatch(removeItem(id));
           }}
         >
-          remove
+          Delete
         </button>
       </div>
     </article>
   );
 };
-export default CarItem;
+export default ReservedItem;
