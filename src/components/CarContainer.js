@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { useDispatch, useSelector } from 'react-redux';
 import { GrUserExpert, GrUserSettings, GrUserAdd } from 'react-icons/gr';
 import { AiFillCar } from 'react-icons/ai';
@@ -67,7 +68,7 @@ const CarContainer = (e) => {
         <div className="absolute flex-col justify-between hidden min-h-screen shadow w-84 sm:relative bg-white-200 md:h-full sm:flex">
           <div className="px-8 py-8 ">
             <div className="flex items-center w-full h-16">
-              <img src={Logo} className="afrilogo" />
+              <img src={Logo} className="afrilogo" alt="NA" />
             </div>
             {/* --------------------------------------------HEADER----logo---------------------------------*/}
 

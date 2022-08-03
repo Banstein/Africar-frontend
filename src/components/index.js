@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 import CarContainer from './CarContainer';
 import { getCarItems } from '../features/car/carSlice';
 import Modal from './Modal';
