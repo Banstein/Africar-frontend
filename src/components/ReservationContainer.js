@@ -1,7 +1,5 @@
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { openModal } from '../features/modal/modalSlice';
-import ReservedItem from './ReservedItem';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const ReservedContainer = () => {
 
