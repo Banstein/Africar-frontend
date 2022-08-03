@@ -7,7 +7,8 @@ const ReservedContainer = () => {
   const user = useSelector(state => state.user);
   useEffect(() => {
     (async () => {
-      const response = await fetch(`https://serene-oasis-96216.herokuapp.com/api/reservations/${user.id}`);
+      const response = await fetch(`https://africar-premium.herokuapp.com/api/v1/reservations/`);
+      console.log(response);
       const data = await response.json();
       setReservedItems(data);
     }
@@ -17,20 +18,18 @@ const ReservedContainer = () => {
   return (
     <section className="h-full flex flex-col items-center justify-center">
       <h2 className="text-center text-3xl font-bold">Your Reservations</h2>
-      <table className="sm:w- full-width">
+      <table className="table-auto w-full p-4">
         <thead>
           <tr>
             <th>City</th>
-            <th>Name</th>
             <th>Date</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody className="bg-white px-4">
           {reservedItems.map((item) => (
             <tr key={item.id}>
-              <td>{item.city}</td>
-              <td>{item.name}</td>
-              <td>{item.date}</td>
+              <td className="border px-4 py-2">{item.city}</td>
+              <td className="border px-4 py-2">{item.date}</td>
             </tr>
           ))}
         </tbody>
