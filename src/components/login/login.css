@@ -29,7 +29,7 @@ body {
   padding: 2rem;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
   position: absolute;
-  z-index: 999
+  z-index: 999;
 }
 
 .vehicle-image {
