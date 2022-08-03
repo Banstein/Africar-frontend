@@ -7,6 +7,11 @@ import Vehicle from '../../assets/fille.png';
 import './login.css';
 
 export default function Login() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  const handleChange = () => {};
   return (
     <>
       {/*
@@ -44,6 +49,7 @@ export default function Login() {
               className='mt-8 space-y-6 login-form'
               action='#'
               method='POST'
+              onSubmit={handleSubmit}
             >
               <input type='hidden' name='remember' defaultValue='true' />
               <div className='-space-y-px rounded-md shadow-sm'>
@@ -59,6 +65,7 @@ export default function Login() {
                     required
                     className='relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-green-500 focus:border-gray-500 focus:z-10 sm:text-sm'
                     placeholder='Email address'
+                    onChange={handleChange}
                   />
                 </div>
                 <div>
@@ -73,6 +80,8 @@ export default function Login() {
                     required
                     className='relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm'
                     placeholder='Password'
+                    onChange={handleChange}
+                    
                   />
                 </div>
               </div>

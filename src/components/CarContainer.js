@@ -42,8 +42,11 @@ const CarContainer = (e) => {
       <footer>
         <hr />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="car-total" />
 =======
+=======
+>>>>>>> b6c5fe4229d6b2597c8dba060ce2c489882b22e3
         <div className="car-total">
           <h4>
             total
@@ -53,7 +56,10 @@ const CarContainer = (e) => {
             </span>
           </h4>
         </div>
+<<<<<<< HEAD
 >>>>>>> 860b4485c58d52dd47d5310b938430a86a332c56
+=======
+>>>>>>> b6c5fe4229d6b2597c8dba060ce2c489882b22e3
         <button className="btn clear-btn" onClick={() => dispatch(openModal())}>
           RESERVATIONS
         </button>
