@@ -23,13 +23,6 @@ function App() {
   }
 
   return (
-<<<<<<< HEAD
-    <main>
-      {isOpen && <Modal />}
-      <Navbar />
-      <CarContainer />
-    </main>
-=======
     <div>
       <main>
         {isOpen && <Modal />}
@@ -37,7 +30,6 @@ function App() {
         <CarContainer />
       </main>
     </div>
->>>>>>> 860b4485c58d52dd47d5310b938430a86a332c56
   );
 }
 export default App;
