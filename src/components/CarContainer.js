@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import { useDispatch, useSelector } from 'react-redux';
 import CarItem from './CarItem';
 import { openModal } from '../features/modal/modalSlice';
@@ -12,7 +11,7 @@ const CarContainer = () => {
         <h2>Cars List</h2>
       </header>
       <div>
-        {carItems.map((item) => <CarItem key={item.id} {...item} />)}
+        {carItems.map((item) => <CarItem key={item.id} car={item} />)}
       </div>
       <footer>
         <hr />
