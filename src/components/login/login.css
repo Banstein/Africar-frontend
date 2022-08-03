@@ -28,4 +28,34 @@ body {
   border-radius: 8px;
   padding: 2rem;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 999
+}
+
+.vehicle-image {
+  max-width: 100vw;
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.girl-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 1;
+  position: relative;
+}
+
+.girl-image img {
+  object-fit: cover;
+  height: 80%;
+  margin-left: -15rem;
+}
+
+.elements {
+  background-color: #f2f2f2 !important;
+  display: flex !important;
+  justify-content: center;
+  width: 100%;
 }
