@@ -1,26 +1,27 @@
 /* eslint-disable react/prop-types */
+import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { removeItem } from '../features/car/carSlice';
 
-const CarItem = ({
-  id, picture, name, price, description,
-}) => {
+const CarItem = ({ car }) => {
   const dispatch = useDispatch();
   return (
     <article className="car-item">
-      <img src={picture} alt={name} />
+      <Link to={`/cars/${car.id}`}>
+        <img src={car.picture} alt={car.name} />
+      </Link>
       <div>
-        <h4>{name}</h4>
-        <p>{description}</p>
+        <h4>{car.name}</h4>
+        <p>{car.description}</p>
         <h4 className="item-price">
           $
-          {price}
+          {car.price}
         </h4>
         <button
-          type="buttton"
           className="remove-btn"
+          type="button"
           onClick={() => {
-            dispatch(removeItem(id));
+            dispatch(removeItem(car.id));
           }}
         >
           remove
@@ -29,4 +30,5 @@ const CarItem = ({
     </article>
   );
 };
+
 export default CarItem;
