@@ -17,6 +17,29 @@ const CarContainer = (e) => {
 
   return (
     <section className="car">
+      {/* <header>
+        <h2>Cars List</h2>
+      </header>
+      <div>
+        {carItems.map((item) => <CarItem key={item.id} car={item} />)}
+      </div>
+      <footer>
+        <hr />
+        <div className="car-total" />
+        <button type="button" className="btn clear-btn" onClick={() => dispatch(openModal())}>
+        <div className="car-total">
+          <h4>
+            total
+            <span>
+              $
+              {total.toFixed(2)}
+            </span>
+          </h4>
+        </div>
+        <button className="btn clear-btn" onClick={() => dispatch(openModal())}>
+          RESERVATIONS
+        </button>
+      </footer> */}
 
       {/* ----------------CAR LIST PAGE ------------------*/}
 
