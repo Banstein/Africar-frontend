@@ -11,7 +11,40 @@ export default function Login() {
     e.preventDefault();
   };
 
-  const handleChange = () => {};
+  // const [onFormSubmitMessage, setOnFormSubmitMessage] = useState('');
+  
+  // const handleChange = () => {};
+
+  // const onSubmit = async (data) => {
+  //   const body = JSON.stringify(data);
+
+  //   if (isLogin) {
+  //     const { user, token } = await requestLogin(body);
+
+  //     if (!(user && token)) {
+  //       setOnFormSubmitMessage('User not found');
+  //       return;
+  //     }
+  //     localStorage.setItem('token', token);
+  //     dispatch(logUserIn(user));
+  //     navigate(state?.path || '/');
+  //   } else {
+  //     if (data.password !== data.passwordConfirm) {
+  //       setOnFormSubmitMessage('Passwords do not match');
+  //       return;
+  //     }
+
+  //     const user = await requestRegisterUser(body);
+  //     if (!user) {
+  //       setOnFormSubmitMessage('User already registered!');
+  //       return;
+  //     }
+
+  //     const { token } = await requestLogin(body);
+  //     localStorage.setItem('token', token);
+  //     dispatch(logUserIn(user));
+  //   }
+  // };
   return (
     <>
       {/*
@@ -49,7 +82,7 @@ export default function Login() {
               className='mt-8 space-y-6 login-form'
               action='#'
               method='POST'
-              onSubmit={handleSubmit}
+              // onSubmit={handleSubmit(onSubmit)}
             >
               <input type='hidden' name='remember' defaultValue='true' />
               <div className='-space-y-px rounded-md shadow-sm'>
@@ -81,7 +114,6 @@ export default function Login() {
                     className='relative block w-full px-3 py-2 text-gray-900 placeholder-gray-500 border border-gray-300 appearance-none focus:outline-none focus:ring-gray-500 focus:border-gray-500 focus:z-10 sm:text-sm'
                     placeholder='Password'
                     onChange={handleChange}
-                    
                   />
                 </div>
               </div>
