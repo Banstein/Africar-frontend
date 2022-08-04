@@ -10,7 +10,6 @@ const CarDetails = () => {
   const fetchCar = async () => {
     const res = await fetch(`http://localhost:3000/api/v1/cars/${carId}`);
     const data = await res.json();
-    console.log(data);
     setCar(data);
   };
   useEffect(() => {
@@ -18,13 +17,13 @@ const CarDetails = () => {
   }, []);
 
   return (
-    <>
+    <article key={car.id}>
       <div>{car.id}</div>
       <div>{car.price}</div>
       <div>{car.name}</div>
       <div>{car.description}</div>
       <div>{car.picture}</div>
-    </>
+    </article>
   );
 };
 
