@@ -9,6 +9,7 @@ import { logUserIn } from '../../features/users/userSlice';
 import logo from '../../assets/afrilogo.png';
 import Hand from '../../assets/hand.png';
 import FormError from '../FormError';
+import SnipperLoginBtn from '../loaders/snipper';
 
 import './signup.css';
 
@@ -19,29 +20,32 @@ function Signup() {
     formState: { errors },
   } = useForm();
 
+  const [isLoading, setIsLoading] = useState(false);
+
+  const navigate = useNavigate();
+
   const dispatch = useDispatch();
   const [onFormSubmitMessage, setOnFormSubmitMessage] = useState('');
 
   const onSubmit = async (data) => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, '4000');
     const body = JSON.stringify(data);
-
-      if (data.password !== data.passwordConfirm) {
-        setOnFormSubmitMessage('Passwords do not match');
-        return;
-      }
-
-      const user = await requestRegisterUser(body);
-      if (!user) {
-        setOnFormSubmitMessage('User already registered!');
-        return;
-      }
-
-      const { token } = await requestLogin(body);
-      localStorage.setItem('token', token);
-      dispatch(logUserIn(user));
-    
+    if (data.password !== data.passwordConfirm) {
+      setOnFormSubmitMessage('Passwords do not match');
+      return;
+    }
+    const user = await requestRegisterUser(body);
+    if (!user) {
+      setOnFormSubmitMessage('User already registered!');
+      return;
+    } else {
+      navigate('/login');
+    }
   };
-  
+
   return (
     <>
       {/*
@@ -196,7 +200,9 @@ function Signup() {
               </div>
 
               <div>
-                <button
+                <SnipperLoginBtn
+                  loading={isLoading}
+                  title={'Signup'}
                   type='submit'
                   className='relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-gray-600 border border-transparent rounded-md group hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                 >
@@ -207,13 +213,13 @@ function Signup() {
                     />
                   </span>
                   Signup
-                </button>
+                </SnipperLoginBtn>
 
                 <div className='text-sm'>
                   <Link className='' to='/login'>
                     <p
                       href='#'
-                      className='font-medium text-blue-700 hover:text-gray-300 link-to-signup'
+                      className='font-medium text-blue-700 hover:text-blue-500 link-to-signup'
                     >
                       already a member? Login
                     </p>

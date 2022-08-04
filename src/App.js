@@ -37,7 +37,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={isLoggedIn ? <Index /> : <SplashScreen />} />
+        <Route path='/' element={isLoggedIn ? <Index /> : <LandingPage />} />
         {/* <Route path='/' element={<LandingPage />} /> */}
         <Route exact path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />

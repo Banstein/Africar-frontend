@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const FormError = ({ children = '' }) => (
-  <p className="text-red-400">{children}</p>
+  <p className="text-red-600">{children}</p>
 );
 
 FormError.propTypes = {

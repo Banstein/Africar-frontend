@@ -4,6 +4,8 @@ import Navbar from './Navbar';
 import CarContainer from './CarContainer';
 import { getCarItems } from '../features/car/carSlice';
 import Modal from './Modal';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const { isLoading } = useSelector((store) => store.car);
@@ -26,7 +28,7 @@ function App() {
     <div>
       <main>
         {isOpen && <Modal />}
-        {/* <Navbar /> */}
+        <ToastContainer/>
         <CarContainer />
       </main>
     </div>
