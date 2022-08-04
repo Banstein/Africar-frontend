@@ -4,7 +4,9 @@ import ReservedItem from './ReservedItem';
 
 const ReservedContainer = () => {
   const dispatch = useDispatch();
-  const { reservedItems, total, amount } = useSelector((store) => store.reservation);
+  const { reservedItems, total, amount } = useSelector(
+    (store) => store.reservation,
+  );
 
   if (amount < 1) {
     return (
@@ -23,7 +25,9 @@ const ReservedContainer = () => {
         <h2>Reserved Car List</h2>
       </header>
       <div>
-        {reservedItems.map((item) => <ReservedItem key={item.id} {...item} />)}
+        {reservedItems.map((item) => (
+          <ReservedItem key={item.id} {...item} />
+        ))}
       </div>
       <footer>
         <hr />
