@@ -104,15 +104,15 @@ const AuthModal = ({ isLogin = true, closeModal }) => {
         {!isLogin && (
           <input
             type='text'
-            {...register('username', { required: true, maxLength: 50 })}
-            placeholder='username'
+            {...register('name', { required: true, maxLength: 50 })}
+            placeholder='name'
             className='w-full p-2 border rounded-sm'
           />
         )}
-        {errors.username?.type === 'required' && (
+        {errors.name?.type === 'required' && (
           <FormError>Must provide a name</FormError>
         )}
-        {/* <input
+        <input
           type='email'
           {...register('email', { required: true, maxLength: 50 })}
           placeholder='Email'
@@ -120,7 +120,7 @@ const AuthModal = ({ isLogin = true, closeModal }) => {
         />
         {errors.email?.type === 'required' && (
           <FormError>Must provide an email</FormError>
-        )} */}
+        )}
         <input
           type='password'
           {...register('password', { required: true, minLength: 6 })}
