@@ -22,7 +22,8 @@ const ReservePage = () => {
     event.preventDefault();
     setFormSubmitted(true);
     setTimeout(() => setFormSubmitted(false), 3000);
-    if (event.target.city.value && event.target.car_id.value && user_id) {
+    if (event.target.city.value && event.target.car_id.value && user.id) {
+      console.log(user.id)
       axios.post(`https://africar-premium.herokuapp.com/${user.id}/api/v1/reservations/`, {
         city: event.target.city.value,
         car_id: event.target.car_id.value,
