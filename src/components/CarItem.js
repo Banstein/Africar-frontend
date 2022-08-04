@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { removeItem } from '../features/car/carSlice';
+import '../app.css';
 
 const CarItem = ({ car }) => {
   const dispatch = useDispatch();

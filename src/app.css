@@ -1,9 +1,3 @@
-/*
-===============
-Variables
-===============
-*/
-
 :root {
   --clr-primary: #9fbd3b;
   --clr-primary-dark: #9fbd3b;
@@ -29,17 +23,8 @@ Variables
 }
 
 body {
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
-    'Open Sans',
-    'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background: white;
   color: black;
   line-height: 1.5;
@@ -78,10 +63,6 @@ h3 {
 
 h4 {
   font-size: 0.5rem;
-}
-
-p {
-  margin-bottom: 0.2rem;
 }
 
 @media screen and (min-width: 800px) {
@@ -209,22 +190,26 @@ p {
   ===============
   */
 .car-item {
-  display: grid;
-  align-items: center;
-  grid-template-columns: auto 1fr auto;
-  grid-column-gap: 1.5rem;
-  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: enter;
 }
 
 .car-item img {
-  width: 5rem;
-  height: 5rem;
+  width: 15rem;
+  height: 10rem;
   object-fit: cover;
+  border-radius: 50%;
+}
+
+.car-item p {
+  margin-bottom: 0.2rem;
+  font-size: 1rem;
+  color: black;
 }
 
 .car-item h4 {
-  margin-bottom: 0.5rem;
-  font-weight: 500;
+  font-weight: normal;
   letter-spacing: 2px;
 }
 

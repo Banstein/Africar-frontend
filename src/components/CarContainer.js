@@ -7,30 +7,13 @@ import { Link } from 'react-router-dom';
 import { openModal } from '../features/modal/modalSlice';
 import CarItem from './CarItem';
 import Logo from '../assets/afrilogo.png';
-import './home/landingPage.css';
-import Cards from './carsCards/Cards';
-import CardAudi from './carsCards/CardAudi';
-import CardBenz from './carsCards/CardBenz';
-
+import ItemSingleCar from './ItemSingleCar';
 import './index.css';
 
 const CarContainer = (e) => {
   const sidebarHandler = () => {
     e.preventDefault();
   };
-  // const dispatch = useDispatch();
-  // const { carItems, total, amount } = useSelector((store) => store.car);
-
-  // if (amount < 1) {
-  //   return (
-  //     <section className="car">
-  //       <header>
-  //         <h2>Cars List</h2>
-  //         <h4 className="empty-car">No Cars Available yet</h4>
-  //       </header>
-  //     </section>
-  //   );
-  // }
 
   return (
     <section className="car">
@@ -324,13 +307,7 @@ const CarContainer = (e) => {
           </div>
           <div className="content">
             <div className="items">
-              <Cards />
-            </div>
-            <div className="items">
-              <CardAudi />
-            </div>
-            <div className="items">
-              <CardBenz />
+              <ItemSingleCar />
             </div>
           </div>
         </div>
