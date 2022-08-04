@@ -1,11 +1,11 @@
 /* eslint-disable max-len */
-import { useDispatch, useSelector } from 'react-redux';
-import { GrUserExpert, GrUserSettings, GrUserAdd } from 'react-icons/gr';
+// import { useDispatch, useSelector } from 'react-redux';
+import { GrUserExpert, GrUserSettings } from 'react-icons/gr';
 import { AiFillCar } from 'react-icons/ai';
 import { BsGithub, BsTwitter } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
-import { openModal } from '../features/modal/modalSlice';
-import CarItem from './CarItem';
+// import { openModal } from '../features/modal/modalSlice';
+// import CarItem from './CarItem';
 import Logo from '../assets/afrilogo.png';
 import ItemSingleCar from './ItemSingleCar';
 import './index.css';
