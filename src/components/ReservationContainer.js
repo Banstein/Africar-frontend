@@ -2,13 +2,11 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 const ReservedContainer = () => {
-
   const [reservedItems, setReservedItems] = useState([]);
-  const user = useSelector(state => state.user);
+  const user = useSelector((state) => state.user);
   useEffect(() => {
     (async () => {
-      const response = await fetch(`https://africar-premium.herokuapp.com/api/v1/reservations/`);
-      console.log(response);
+      const response = await fetch('https://africar-premium.herokuapp.com/api/v1/reservations/');
       const data = await response.json();
       setReservedItems(data);
     }
@@ -23,7 +21,7 @@ const ReservedContainer = () => {
           <tr>
             <th>City</th>
             <th>Date</th>
-            </tr>
+          </tr>
         </thead>
         <tbody className="bg-white px-4">
           {reservedItems.map((item) => (
@@ -36,5 +34,5 @@ const ReservedContainer = () => {
       </table>
     </section>
   );
-}; 
+};
 export default ReservedContainer;

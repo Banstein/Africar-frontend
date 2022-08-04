@@ -80,5 +80,5 @@ const ReservePage = () => {
       </div>
     </section>
   );
-}
+};
 export default ReservePage;
