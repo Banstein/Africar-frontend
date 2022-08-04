@@ -13,7 +13,7 @@ export default function Login() {
 
   // const [onFormSubmitMessage, setOnFormSubmitMessage] = useState('');
   
-  // const handleChange = () => {};
+  const handleChange = () => {};
 
   // const onSubmit = async (data) => {
   //   const body = JSON.stringify(data);
@@ -82,7 +82,6 @@ export default function Login() {
               className='mt-8 space-y-6 login-form'
               action='#'
               method='POST'
-              // onSubmit={handleSubmit(onSubmit)}
             >
               <input type='hidden' name='remember' defaultValue='true' />
               <div className='-space-y-px rounded-md shadow-sm'>

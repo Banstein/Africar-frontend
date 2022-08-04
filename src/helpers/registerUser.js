@@ -3,10 +3,12 @@ const requestRegisterUser = async (body) => {
   const newBody = {
     user: {
       name: parsedBody.name,
+      email: parsedBody.email,
       password: parsedBody.password,
     },
   };
-  const res = await fetch('https://car-booking-premium.herokuapp.com/api/v1/users',
+  const res = await fetch(
+    'https://car-booking-premium.herokuapp.com/api/v1/users',
     {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
