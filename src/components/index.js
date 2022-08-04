@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 import CarContainer from './CarContainer';
 import { getCarItems } from '../features/car/carSlice';
 import Modal from './Modal';
@@ -16,7 +16,7 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className='loading'>
+      <div className="loading">
         <h1>Loading...</h1>
       </div>
     );

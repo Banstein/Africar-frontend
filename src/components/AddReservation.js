@@ -7,11 +7,11 @@ const ReservePage = () => {
   const user = useSelector((state) => state.user);
   useEffect(() => {
     (async () => {
-      const res = await fetch('https://car-booking-premium.herokuapp.com/api/v1/cars');
+      const res = await fetch('https://africar-premium.herokuapp.com/api/v1/cars');
       const data = await res.json();
       const names = data.map((el) => ({
         car_id: el.id,
-        names: `${el.make} - ${el.names}`,
+        names: `${el.name}`,
       }));
       setNames(names);
     })();
@@ -63,9 +63,9 @@ const ReservePage = () => {
                 Car
               </label>
               <select name="car_id" id="car_id" className="bg-#81B622-100 border border-#81B622-400 text-#81B622-700 px-4 py-3 rounded">
-                {names.map((el) => (
-                  <option key={el.car_id} value={el.car_id}>
-                    {el.names}
+                {names.map((name) => (
+                  <option key={name.car_id} value={name.car_id}>
+                    {name.names}
                   </option>
                 ))}
               </select>
