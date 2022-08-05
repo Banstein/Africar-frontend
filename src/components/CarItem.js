@@ -7,14 +7,14 @@ import '../app.css';
 const CarItem = ({ car }) => {
   const dispatch = useDispatch();
   return (
-    <article className="car-item">
-      <Link to={`/${car.id}`}>
+    <article className="w-full p-2 m-2 bg-gray-400 car-item">
+      <Link to={`/cars/${car.id}`}>
         <img src={car.picture} alt={car.name} />
       </Link>
       <div>
         <h4>{car.id}</h4>
         <h4>{car.name}</h4>
-        <p>{car.description.substring(0, 70)}</p>
+        <p className='text-gray-700 '>{car.description.substring(0, 40)}</p>
         <h4 className="item-price">
           $
           {car.price}

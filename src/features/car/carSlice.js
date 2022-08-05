@@ -10,6 +10,7 @@ const initialState = {
   isLoading: true,
 };
 
+
 export const getCarItems = createAsyncThunk(
   'car/getCarItems',
   async (name, thunkAPI) => {

@@ -1,0 +1,112 @@
+{
+  "resources": [
+    {
+      "id": 1,
+      "title": "VW Passat",
+      "description": "The Passat is a five-seat mid-size sedan that competes with cars like the Honda Accord, Toyota Camry and Hyundai Sonata. It's powered by a standard 174-horsepower, turbocharged 2.0-liter four-cylinder engine that works with a six-speed automatic transmission.",
+      "imageUrl": "https://images.pexels.com/photos/337909/pexels-photo-337909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "price": "300.0",
+      "created_at": "2022-08-04T13:18:16.080Z",
+      "updated_at": "2022-08-04T13:18:16.080Z"
+    },
+    {
+      "id": 2,
+      "title": "Toyota Camry",
+      "description": "The Camry is surprisingly enjoyable to drive, and it provides a comfortable ride. Some midsize cars have more upscale interiors, but this Toyota is roomy, with supportive seats and intuitive tech features",
+      "imageUrl": "https://images.pexels.com/photos/5126879/pexels-photo-5126879.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "price": "320.0",
+      "created_at": "2022-08-04T13:18:16.080Z",
+      "updated_at": "2022-08-04T13:18:16.080Z"
+    },
+    {
+      "id": 3,
+      "title": "Ford Ecosport",
+      "description": "The 2022 EcoSport is only offered with a 166-hp four-cylinder engine, a six-speed automatic transmission, and all-wheel drive. Still, it's the opposite of quick. The EcoSport drives much better at slower speeds, slipping through busy streets with ease, but its vague steering and noisy ride diminish the experience",
+      "imageUrl": "https://images.pexels.com/photos/13101566/pexels-photo-13101566.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load",
+      "price": "400.0",
+      "created_at": "2022-08-04T13:18:16.080Z",
+      "updated_at": "2022-08-04T13:18:16.080Z"
+    },
+    {
+      "id": 4,
+      "title": "BMW 318i",
+      "description": "the 318i is great on the roads. The most surprising thing about it is its ability to adapt to different driving styles. If you're the kind of person who employs more enthusiastic driving, the car is responsive and heeds to every pedal touch or steering input without fuss",
+      "imageUrl": "https://images.pexels.com/photos/831475/pexels-photo-831475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "price": "500.0",
+      "created_at": "2022-08-04T13:18:16.080Z",
+      "updated_at": "2022-08-04T13:18:16.080Z"
+    },
+    {
+      "id": 5,
+      "title": "Mazda CX9",
+      "description": "The Mazda CX-9 is a three-row SUV with seven seats. A six-seat layout is optional, and it swaps the second-row bench seat for a pair of captain's chairs. The front seats are well-cushioned and supportive",
+      "imageUrl": "https://images.pexels.com/photos/7635128/pexels-photo-7635128.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load",
+      "price": "600.0",
+      "created_at": "2022-08-04T13:18:16.080Z",
+      "updated_at": "2022-08-04T13:18:16.080Z"
+    },
+    {
+      "id": 6,
+      "title": "Fiat Tipo",
+      "description": "The Fiat Tipo is a well-rounded budget car. It offers more than enough practicality for most situations, while the strong engine and comfortable chassis make it an acceptable family five-door to live with. However, it's the Fiat's thrifty running costs that seal the deal",
+      "imageUrl": "https://images.pexels.com/photos/575386/pexels-photo-575386.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "price": "300.0",
+      "created_at": "2022-08-04T13:18:16.080Z",
+      "updated_at": "2022-08-04T13:18:16.080Z"
+    },
+    {
+        "id": 4,
+        "title": "BMW 318i",
+        "description": "the 318i is great on the roads. The most surprising thing about it is its ability to adapt to different driving styles. If you're the kind of person who employs more enthusiastic driving, the car is responsive and heeds to every pedal touch or steering input without fuss",
+        "imageUrl": "https://images.pexels.com/photos/831475/pexels-photo-831475.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "price": "500.0",
+        "created_at": "2022-08-04T13:18:16.080Z",
+        "updated_at": "2022-08-04T13:18:16.080Z"
+      },
+      {
+        "id": 5,
+        "title": "Mazda CX9",
+        "description": "The Mazda CX-9 is a three-row SUV with seven seats. A six-seat layout is optional, and it swaps the second-row bench seat for a pair of captain's chairs. The front seats are well-cushioned and supportive",
+        "imageUrl": "https://images.pexels.com/photos/166054/pexels-photo-166054.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "price": "600.0",
+        "created_at": "2022-08-04T13:18:16.080Z",
+        "updated_at": "2022-08-04T13:18:16.080Z"
+      },
+      {
+        "id": 6,
+        "title": "Fiat Tipo",
+        "description": "The Fiat Tipo is a well-rounded budget car. It offers more than enough practicality for most situations, while the strong engine and comfortable chassis make it an acceptable family five-door to live with. However, it's the Fiat's thrifty running costs that seal the deal",
+        "imageUrl": "https://images.pexels.com/photos/7635128/pexels-photo-7635128.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load",
+        "price": "300.0",
+        "created_at": "2022-08-04T13:18:16.080Z",
+        "updated_at": "2022-08-04T13:18:16.080Z"
+      },
+      {
+        "id": 4,
+        "title": "BMW 318i",
+        "description": "the 318i is great on the roads. The most surprising thing about it is its ability to adapt to different driving styles. If you're the kind of person who employs more enthusiastic driving, the car is responsive and heeds to every pedal touch or steering input without fuss",
+        "imageUrl": "https://images.pexels.com/photos/10111844/pexels-photo-10111844.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load",
+        "price": "500.0",
+        "created_at": "2022-08-04T13:18:16.080Z",
+        "updated_at": "2022-08-04T13:18:16.080Z"
+      },
+      {
+        "id": 5,
+        "title": "Mazda CX9",
+        "description": "The Mazda CX-9 is a three-row SUV with seven seats. A six-seat layout is optional, and it swaps the second-row bench seat for a pair of captain's chairs. The front seats are well-cushioned and supportive",
+        "imageUrl": "https://images.pexels.com/photos/4502385/pexels-photo-4502385.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load",
+        "price": "600.0",
+        "created_at": "2022-08-04T13:18:16.080Z",
+        "updated_at": "2022-08-04T13:18:16.080Z"
+      },
+      {
+        "id": 6,
+        "title": "Fiat Tipo",
+        "description": "The Fiat Tipo is a well-rounded budget car. It offers more than enough practicality for most situations, while the strong engine and comfortable chassis make it an acceptable family five-door to live with. However, it's the Fiat's thrifty running costs that seal the deal",
+        "imageUrl": "https://images.pexels.com/photos/9703449/pexels-photo-9703449.jpeg?auto=compress&cs=tinysrgb&w=800&lazy=load",
+        "price": "300.0",
+        "created_at": "2022-08-04T13:18:16.080Z",
+        "updated_at": "2022-08-04T13:18:16.080Z"
+      }
+  ]
+}
