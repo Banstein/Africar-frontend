@@ -10,6 +10,7 @@ import logo from '../../assets/afrilogo.png';
 import Hand from '../../assets/hand.png';
 import FormError from '../FormError';
 import SnipperLoginBtn from '../loaders/snipper';
+import Vehicle from '../../assets/fille.png';
 
 import './signup.css';
 
@@ -85,8 +86,13 @@ function Signup() {
         </div>
       )}
 
-      <div className="elements">
-        <div className="flex items-center content-center justify-center min-h-full px-4 py-12 sm:px-6 lg:px-8">
+      <div className="flex">
+      <div className="flex justify-between w-screen vehicle-image">
+          <div className="flex w-full h-full col-auto girl-image">
+            <img src={Vehicle} className="object-cover w-8/12 h-50" />
+          </div>
+        </div>
+        <div className="absolute flex items-center content-center justify-center min-h-full px-4 py-12 sm:px-6 lg:px-8">
           <div className="w-full max-w-md px-6 py-4 space-y-8">
             <div>
               <img className="w-auto h-20 mx-auto" src={logo} alt="Workflow" />
