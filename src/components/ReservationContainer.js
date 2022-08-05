@@ -6,7 +6,7 @@ const ReservedContainer = () => {
   const user = useSelector((state) => state.user);
   useEffect(() => {
     (async () => {
-      const response = await fetch('https://africar-premium.herokuapp.com/api/v1/reservations/');
+      const response = await fetch('https://africar-premium.herokuapp.com/api/v1/users/:user_id/reservations',);
       const data = await response.json();
       setReservedItems(data);
     }
