@@ -1,0 +1,32 @@
+body {
+  /* background-color: #9fbd3b; */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.min-h-full {
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 100vh;
+  border-radius: 8px;
+}
+
+.appearance-none {
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+
+.link-to-signup {
+  margin-top: 1rem;
+  color: #9fbd3b;
+}
+
+.max-w-md {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  margin: 0 auto;
+}
