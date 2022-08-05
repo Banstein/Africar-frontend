@@ -60,7 +60,7 @@
 
 ## Frontend Live version
 
-[Live Version]()
+[Live Version](https://relaxed-boba-84ada7.netlify.app/)
 
 ## Frontend Source Code
 
