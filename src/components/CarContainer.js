@@ -24,46 +24,6 @@ const CarContainer = (e) => {
 
   return (
     <section className="car">
-<<<<<<< HEAD
-      {/* <header>
-        <h2>Cars List</h2>
-      </header>
-      <div>
-        {carItems.map((item) => <CarItem key={item.id} car={item} />)}
-      </div>
-      <footer>
-        <hr />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className="car-total" />
-=======
-=======
->>>>>>> b6c5fe4229d6b2597c8dba060ce2c489882b22e3
-=======
-        <div className="car-total" />
-        <button type="button" className="btn clear-btn" onClick={() => dispatch(openModal())}>
->>>>>>> 86b86990904fb6017b2344c02d53848dd265ef3c
-        <div className="car-total">
-          <h4>
-            total
-            <span>
-              $
-              {total.toFixed(2)}
-            </span>
-          </h4>
-        </div>
-<<<<<<< HEAD
->>>>>>> 860b4485c58d52dd47d5310b938430a86a332c56
-=======
->>>>>>> b6c5fe4229d6b2597c8dba060ce2c489882b22e3
-        <button className="btn clear-btn" onClick={() => dispatch(openModal())}>
-          RESERVATIONS
-        </button>
-      </footer> */}
-
-=======
->>>>>>> cf4cc55b0824468d6ac694f6c59e8b8c8c48489a
       {/* ----------------CAR LIST PAGE ------------------*/}
 
       <div className="flex flex-no-wrap">
