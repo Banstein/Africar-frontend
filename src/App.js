@@ -1,5 +1,5 @@
 /* eslint-disable jsx-quotes */
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -13,10 +13,10 @@ import ProtectedRoutes from './components/protectedRoutes';
 import Login from './components/login/Login';
 import Signup from './components/signup/Signup';
 import Index from './components';
+import CarDetails from './components/CarDetails';
 import ReservedContainer from './components/ReservationContainer';
 import { logUserIn } from './features/users/userSlice';
 import SplashScreen from './components/SplashScreen';
-
 
 function App() {
   const { isLoggedIn } = useSelector((state) => state.user);

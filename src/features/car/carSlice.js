@@ -1,6 +1,7 @@
+/* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { openModal } from '../modal/modalSlice';
+// import { openModal } from '../modal/modalSlice';
 
 const url = 'http://localhost:3000/api/v1/cars';
 
@@ -38,12 +39,10 @@ const carSlice = createSlice({
       state.isLoading = true;
     },
     [getCarItems.fulfilled]: (state, action) => {
-      // console.log(action);
       state.isLoading = false;
       state.carItems = action.payload;
     },
-    [getCarItems.rejected]: (state, action) => {
-      console.log(action);
+    [getCarItems.rejected]: (state) => {
       state.isLoading = false;
     },
   },

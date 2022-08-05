@@ -7,7 +7,7 @@ const requestLogin = async (body) => {
         'Content-Type': 'application/json',
       },
       body,
-    }
+    },
   );
 
   const data = await res.json();

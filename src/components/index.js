@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
+import { ToastContainer, toast } from 'react-toastify';
 import CarContainer from './CarContainer';
 import { getCarItems } from '../features/car/carSlice';
 import Modal from './Modal';
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
 
   if (isLoading) {
     return (
-      <div className='loading'>
+      <div className="loading">
         <h1>Loading...</h1>
       </div>
     );
@@ -28,7 +28,7 @@ function App() {
     <div>
       <main>
         {isOpen && <Modal />}
-        <ToastContainer/>
+        <ToastContainer />
         <CarContainer />
       </main>
     </div>

@@ -9,7 +9,7 @@ const ProtectedRoutes = ({ children }) => {
   return isLoggedIn ? (
     children
   ) : (
-    <Navigate to='/' replace state={{ path: location.pathname }} />
+    <Navigate to="/" replace state={{ path: location.pathname }} />
   );
 };
 
