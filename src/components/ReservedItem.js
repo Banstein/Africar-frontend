@@ -24,10 +24,11 @@ const ReserveForm= () => {
     setFormSubmitted(true);
     setTimeout(() => setFormSubmitted(false), 3000);
     if (event.target.city.value && event.target.car_id.value && user.id) {
-      axios.post(`https://africar-premium.herokuapp.com/api/v1/users/reservations`, {
+      axios.post(`https://africar-premium.herokuapp.com//api/v1/users/:user_id/reservations`, {
+        id: 1,
         city: event.target.city.value,
         car_id: event.target.car_id.value,
-        user_id: user.id,
+        user_id: 1,
       }).then(() => {
         setOnFormSubmitMessage('Form submission succeeded.');
       });
