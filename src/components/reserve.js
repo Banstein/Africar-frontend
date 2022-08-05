@@ -1,0 +1,73 @@
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useSelector } from 'react-redux';
+
+const ReserveForm = () => {
+  const [names, setNames] = useState([]);
+  const user = useSelector((state) => state.user.user);
+  useEffect(() => {
+    (async () => {
+      const res = await fetch('https://africar-premium.herokuapp.com/api/v1/cars');
+      const data = await res.json();
+      const names = data.map((el) => ({
+        car_id: el.id,
+        name: `${el.make}`,
+      }));
+      setNames(names);
+    })();
+  }, []);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [onFormSubmitMessage, setOnFormSubmitMessage] = useState('Form submission failed. Make sure to fill all the fields.');
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setFormSubmitted(true);
+    setTimeout(() => setFormSubmitted(false), 3000);
+    if (event.target.city.value && event.target.car_id.value && user.id) {
+      axios.post(`https://africar-premium.herokuapp.com/api/v1/users/${user.id}/reservations`, {
+        city: event.target.city.value,
+        car_id: event.target.car_id.value,
+        user_id: user.id,
+      }).then(() => {
+        setOnFormSubmitMessage('Form submission succeeded.');
+      });
+    }
+  };
+  return (
+    <section className="fixed top-0 w-full h-full md:pl-[20vw] bg-[url('/src/assets/backgroundReserverCar.jpg')] bg-no-repeat bg-200%">
+      <div className="w-full h-full bg-[#32CD32]/70 px-20 flex flex-col justify-center">
+        <div className="w-full h-[50%] text-center flex flex-col justify-center items-center gap-[2rem]">
+          <h1 className="font-bold text-white text-3xl md:text-5xl md:mb-5">
+            MAKE YOUR RESERVATION
+          </h1>
+          {formSubmitted && (
+            <div className="bg-green-100 border border-orange-400 text-green-700 px-4 py-3 rounded fixed top-4" role="alert">
+              <span className="block sm:inline">{onFormSubmitMessage}</span>
+            </div>
+          )}
+          <form onSubmit={handleSubmit} className="w-full h-full text-center flex flex-col items-center gap-[2rem] md:flex-row lg:w-[70%] md:h-auto">
+             <select className="w-[80%] sm:w-[40%] h-[2.6rem] rounded-3xl bg-transparent #32CD32 border border-2 border-white font-bold text-xl text-white text-center" name="reservation[city]" id="city">
+              <option value="" selected disabled hidden>CITY</option>
+              <option value="New York">New York</option>
+              <option value="York">York</option>
+              <option value="Washingtone">Washingtone</option>
+              <option value="Salt Lake">Salt Lake</option>
+              <option value="Los Angeles">Los Angeles</option>
+              <option value="New Mexico">New Mexico</option>
+              <option value="Chicago">Chicago</option>
+              <option value="Phoenix">Phoenix</option>
+              <option value="San Antonio">San Antonio</option>
+            </select>
+            <select className="w-[80%] sm:w-[40%] h-[2.6rem] rounded-3xl bg-transparent border border-2 border-white font-bold text-xl text-white text-center" name="reservation[car_id]" id="car_id">
+              <option value="" selected disabled hidden>MODEL</option>
+              {names.map((name) => (
+                <option key={name.car_id} value={name.car_id}>{name.name}</option>))}
+            </select>
+            <button type="submit" className="bg-white font-bold text-2xl text-[#fdac01] px-5 py-2 rounded-xl">RESERVE</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ReserveForm;
