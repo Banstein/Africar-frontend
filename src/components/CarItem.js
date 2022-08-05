@@ -8,10 +8,11 @@ const CarItem = ({ car }) => {
   const dispatch = useDispatch();
   return (
     <article className="car-item">
-      <Link to={`/cars/${car.id}`}>
+      <Link to={`/${car.id}`}>
         <img src={car.picture} alt={car.name} />
       </Link>
       <div>
+        <h4>{car.id}</h4>
         <h4>{car.name}</h4>
         <p>{car.description.substring(0, 70)}</p>
         <h4 className="item-price">
