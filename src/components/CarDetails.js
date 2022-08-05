@@ -1,30 +1,12 @@
-/* eslint-disable react/prop-types */
-// import { useDispatch } from 'react-redux';
-// import { getCarItems } from '../features/car/carSlice';
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import React from 'react';
+import PageError from '../assets/page.svg';
 
-const CarDetails = () => {
-  const { carId } = useParams();
-  const [car, setCar] = useState({});
-  const fetchCar = async () => {
-    const res = await fetch(`http://localhost:3000/api/v1/cars/${carId}`);
-    const data = await res.json();
-    setCar(data);
-  };
-  useEffect(() => {
-    fetchCar();
-  }, []);
-
+function CarDetails() {
   return (
-    <article key={car.id}>
-      <div>{car.id}</div>
-      <div>{car.price}</div>
-      <div>{car.name}</div>
-      <div>{car.description}</div>
-      <div>{car.picture}</div>
-    </article>
+    <div>
+      <img src={PageError} />
+    </div>
   );
-};
+}
 
 export default CarDetails;

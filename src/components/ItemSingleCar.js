@@ -20,10 +20,10 @@ function ItemSingleCar() {
   //   );
   return (
     <>
-      <div className='car-header'>
-        <div className='flex car-header'>
+      <div className='w-screen bg-red-400 car-header'>
+        <div className='flex w-screen bg-blue-500 car-header'>
           {carItems.map((item) => (
-            <CarItem key={item.id} car={item} />
+            <CarItem key={item.id} car={item} className='m-4' />
           ))}
         </div>
       </div>

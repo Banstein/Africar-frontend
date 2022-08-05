@@ -3,3 +3,7 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
+section img {
+  width: 10%;
+}

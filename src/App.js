@@ -45,7 +45,8 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         {/* <Route path='/car-list' element={<Index />} /> */}
         <Route path='/reserveform' element={<ReserveForm />} />
-        <Route path='reservation' element={<ReservationContainer />} />
+        <Route path='/reservation' element={<ReservationContainer />} />
+        <Route path='/cardetails' element={ CarDetails} />
       </Routes>
     </Router>
   );
