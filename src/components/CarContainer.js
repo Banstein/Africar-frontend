@@ -1,39 +1,30 @@
-/* eslint-disable max-len */
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+
 import { GrUserExpert, GrUserSettings, GrUserAdd } from 'react-icons/gr';
 import { AiFillCar } from 'react-icons/ai';
 import { BsGithub, BsTwitter } from 'react-icons/bs';
-import { Link } from 'react-router-dom';
-import { openModal } from '../features/modal/modalSlice';
-import CarItem from './CarItem';
+import { logUserOut } from '../features/users/userSlice';
 import Logo from '../assets/afrilogo.png';
-import './home/landingPage.css';
-import Cards from './carsCards/Cards';
-import CardAudi from './carsCards/CardAudi';
-import CardBenz from './carsCards/CardBenz';
-
+import ItemSingleCar from './ItemSingleCar';
 import './index.css';
 
 const CarContainer = (e) => {
   const sidebarHandler = () => {
     e.preventDefault();
   };
-  // const dispatch = useDispatch();
-  // const { carItems, total, amount } = useSelector((store) => store.car);
 
-  // if (amount < 1) {
-  //   return (
-  //     <section className="car">
-  //       <header>
-  //         <h2>Cars List</h2>
-  //         <h4 className="empty-car">No Cars Available yet</h4>
-  //       </header>
-  //     </section>
-  //   );
-  // }
+  const dispatch = useDispatch();
+
+  const handleLogOutUser = () => {
+    dispatch(logUserOut());
+    localStorage.removeItem('token');
+  };
 
   return (
     <section className="car">
+<<<<<<< HEAD
       {/* <header>
         <h2>Cars List</h2>
       </header>
@@ -71,6 +62,8 @@ const CarContainer = (e) => {
         </button>
       </footer> */}
 
+=======
+>>>>>>> cf4cc55b0824468d6ac694f6c59e8b8c8c48489a
       {/* ----------------CAR LIST PAGE ------------------*/}
 
       <div className="flex flex-no-wrap">
@@ -112,7 +105,7 @@ const CarContainer = (e) => {
               <li className="w-full justify-center cursor-pointer item-center flex items-center text-gray-900 bg-white border border-gray-200 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-300 dark:text-gray-700 dark:border-gray-200 dark:hover:bg-gray-200 dark:hover:border-gray-100 dark:focus:ring-gray-300">
                 <div className="flex items-center content-center text-center">
                   <GrUserExpert />
-                  <Link to="/login">
+                  <Link to="/login" handleLogOutUser={handleLogOutUser}>
                     <span className="ml-2 text-sm ">Logout</span>
                   </Link>
                 </div>
@@ -337,13 +330,7 @@ const CarContainer = (e) => {
           </div>
           <div className="content">
             <div className="items">
-              <Cards />
-            </div>
-            <div className="items">
-              <CardAudi />
-            </div>
-            <div className="items">
-              <CardBenz />
+              <ItemSingleCar />
             </div>
           </div>
         </div>

@@ -2,36 +2,48 @@ import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 const ReservedContainer = () => {
-  const [reservedItems, setReservedItems] = useState([]);
-  const user = useSelector((state) => state.user);
-  useEffect(() => {
-    (async () => {
-      const response = await fetch('https://africar-premium.herokuapp.com/api/v1/users/:user_id/reservations',);
-      const data = await response.json();
-      setReservedItems(data);
-    }
-    )();
-  }, []);
+  const dispatch = useDispatch();
+  const { reservedItems, total, amount } = useSelector(
+    (store) => store.reservation,
+  );
+
+  if (amount < 1) {
+    return (
+      <section className="car">
+        <header>
+          <h2>Reserved</h2>
+          <h4 className="empty-car">No Car Reserved Yet</h4>
+        </header>
+      </section>
+    );
+  }
 
   return (
-    <section className="h-full flex flex-col items-center justify-center">
-      <h2 className="text-center text-3xl font-bold">Your Reservations</h2>
-      <table className="table-auto w-full p-4">
-        <thead>
-          <tr>
-            <th>City</th>
-            <th>Date</th>
-          </tr>
-        </thead>
-        <tbody className="bg-white px-4">
-          {reservedItems.map((item) => (
-            <tr key={item.id}>
-              <td className="border px-4 py-2">{item.city}</td>
-              <td className="border px-4 py-2">{item.date}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+    <section className="car">
+      <header>
+        <h2>Reserved Car List</h2>
+      </header>
+      <div>
+        {reservedItems.map((item) => (
+          <ReservedItem key={item.id} {...item} />
+        ))}
+      </div>
+      <footer>
+        <hr />
+        <div className="car-total">
+          <h4>
+            total
+            {' '}
+            <span>
+              $
+              {total.toFixed(2)}
+            </span>
+          </h4>
+        </div>
+        <button className="btn clear-btn" onClick={() => dispatch(openModal())}>
+          RESERVATIONS
+        </button>
+      </footer>
     </section>
   );
 };

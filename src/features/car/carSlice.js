@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 // import { openModal } from '../modal/modalSlice';
 
-const url = 'http://localhost:3000/api/v1/cars';
+const url = 'https://africar-premium.herokuapp.com/api/v1/cars';
 
 const initialState = {
   carItems: [],
