@@ -1,51 +1,45 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { openModal } from '../features/modal/modalSlice';
-import ReservedItem from './ReservedItem';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
-const ReservedContainer = () => {
-  const dispatch = useDispatch();
-  const { reservedItems, total, amount } = useSelector(
-    (store) => store.reservation,
-  );
-
-  if (amount < 1) {
-    return (
-      <section className="car">
-        <header>
-          <h2>Reserved</h2>
-          <h4 className="empty-car">No Car Reserved Yet</h4>
-        </header>
-      </section>
-    );
-  }
-
+const ReservationContainer = () => {
+  const [reservations, setReservations] = useState([]);
+  const user = useSelector((state) => state.user.user);
+  useEffect(() => {
+    (async () => {
+      const res = await fetch(
+        `https://africar-premium.herokuapp.com/api/v1/users/:user_id/reservations`,
+      );
+      const data = await res.json();
+      setReservations(data);
+    })();
+  }, []);
   return (
-    <section className="car">
-      <header>
-        <h2>Reserved Car List</h2>
-      </header>
-      <div>
-        {reservedItems.map((item) => (
-          <ReservedItem key={item.id} {...item} />
-        ))}
-      </div>
-      <footer>
-        <hr />
-        <div className="car-total">
-          <h4>
-            total
-            {' '}
-            <span>
-              $
-              {total.toFixed(2)}
-            </span>
-          </h4>
-        </div>
-        <button className="btn clear-btn" onClick={() => dispatch(openModal())}>
-          RESERVATIONS
-        </button>
-      </footer>
+    <section className="h-full text-center flex flex-col items-center pt-20 w-4/5">
+      <h1 className="font-bold text-3xl md:text-5xl md:mb-5">
+        MY RESERVATIONS
+      </h1>
+      <table className="sm:w-[80%]">
+        <thead>
+          <tr>
+            <th>City</th>
+            <th>Car Model</th>
+            <th>Created at</th>
+          </tr>
+        </thead>
+        <tbody>
+          {reservations.map((reservation) => (
+            <tr key={reservation.id}>
+              <td>{reservation.city}</td>
+              <td>{reservation.car_name}</td>
+              <td>
+                {new Date(reservation.created_at).toLocaleDateString('en-UK')}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </section>
   );
 };
-export default ReservedContainer;
+
+export default ReservationContainer;
