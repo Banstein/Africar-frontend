@@ -13,7 +13,7 @@ const CarItem = ({ car }) => {
       </Link>
       <div>
         <h4>{car.name}</h4>
-        <p>{car.description}</p>
+        <p>{car.description.substring(0, 70)}</p>
         <h4 className="item-price">
           $
           {car.price}
