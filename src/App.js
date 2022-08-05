@@ -17,6 +17,8 @@ import CarDetails from './components/CarDetails';
 import ReservedContainer from './components/ReservationContainer';
 import { logUserIn } from './features/users/userSlice';
 import SplashScreen from './components/SplashScreen';
+import ReserveForm from './components/ReservedItem';
+import ReservationContainer from './components/ReservationContainer';
 
 function App() {
   const { isLoggedIn } = useSelector((state) => state.user);
@@ -42,7 +44,8 @@ function App() {
         <Route exact path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
         {/* <Route path='/car-list' element={<Index />} /> */}
-        <Route path='/reservation' element={<ReservedContainer />} />
+        <Route path='/reserveform' element={<ReserveForm />} />
+        <Route path='reservation' element={<ReservationContainer />} />
       </Routes>
     </Router>
   );
