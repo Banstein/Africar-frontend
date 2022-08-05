@@ -1,6 +1,3 @@
-import React from 'react';
-import PageError from '../assets/page.svg';
-
 function CarDetails() {
   return (
     <div>

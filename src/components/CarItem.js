@@ -12,6 +12,7 @@ const CarItem = ({ car }) => {
         <img src={car.picture} alt={car.name} />
       </Link>
       <div>
+        <h4>{car.id}</h4>
         <h4>{car.name}</h4>
         <p className='text-gray-700 '>{car.description.substring(0, 40)}</p>
         <h4 className="item-price">
