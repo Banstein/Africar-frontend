@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import requestLogin from '../../helpers/logUserIn';
 import requestRegisterUser from '../../helpers/registerUser';
 import { logUserIn } from '../../features/users/userSlice';
-import logo from '../../assets/afrilogo.png';
+import logo from '../../assets/afrilogo.jpeg';
 import SnipperLoginBtn from '../loaders/snipper';
 import FormError from '../FormError';
 import Vehicle from '../../assets/fille.png';

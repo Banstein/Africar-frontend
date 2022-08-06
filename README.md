@@ -1,6 +1,6 @@
 <div id="header" align="center">
   <a href="#">
-    <img src="./src/assets/afrilogo.png" alt="Logo" width="250">
+    <img src="./src/assets/afrilogo.jpeg" alt="Logo" width="250">
   </a>
   <p align="center">
     <br />
