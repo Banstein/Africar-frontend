@@ -279,20 +279,9 @@ const CarContainer = (e) => {
         {/* Sidebar ends */}
 
         {/* Remove class [ h-64 ] when adding a card block */}
-        <div className="w-11/12 h-64 px-6 py-10 mx-auto car-container md:w-4/5">
-          <div className="w-full h-full overflow-hidden border-gray-300 rounded shadow-lg header-title">
-            <div className="">
-              <h2 className="car-header ">
-                See all our cars, brands and list. Delivered in Africa!
-              </h2>
-              <p className="car-header">You will not be disapointed</p>
-            </div>
-          </div>
-          <div className="content">
-            <div className="items">
-              <ItemSingleCar />
-            </div>
-          </div>
+        <div className="w-11/12 h-64 px-6 py-10 mx-auto  md:w-4/5">
+          <h2>See all of our provided cars for rent</h2>
+        <ItemSingleCar />
         </div>
       </div>
     </section>

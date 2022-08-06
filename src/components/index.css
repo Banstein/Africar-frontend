@@ -3,3 +3,23 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #fff;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.car-details-page {
+  display: flex;
+}

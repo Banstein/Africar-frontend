@@ -1,49 +1,64 @@
 /* eslint-disable jsx-quotes */
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { Carousel } from 'react-responsive-carousel';
 import CarItem from './CarItem';
-// import { openModal } from '../features/modal/modalSlice';
+import { getCarItems } from '../features/car/carSlice';
 import '../app.css';
 
-function ItemSingleCar() {
-  // const dispatch = useDispatch();
+const ItemSingleCar = () => {
   const { carItems } = useSelector((store) => store.car);
 
-  // if (amount < 1) {
-  //   return (
-  //     <section className='car'>
-  //       <header>
-  //         <h2>Cars List</h2>
-  //         <h4 className='empty-car'>No Cars Available yet</h4>
-  //       </header>
-  //     </section>
-  //   );
   return (
     <>
-      <div className='car-header'>
-        <div className='flex car-header'>
+      <div className='car-header hidden md:block'>
+        <Carousel
+          showThumbs={false}
+          showIndicators={false}
+          showStatus={false}
+          className=' '
+        >
           {carItems.map((item) => (
             <CarItem key={item.id} car={item} />
           ))}
-        </div>
+        </Carousel>
       </div>
-      {/* <footer>
-          <hr />
-          <div className='car-total'>
-            <h4>
-              total
-              <span>${total.toFixed(2)}</span>
-            </h4>
-          </div>
-          <button
-            className='btn clear-btn'
-            onClick={() => dispatch(openModal())}
-          >
-            RESERVATIONS
-          </button>
-        </footer> */}
     </>
   );
-}
+};
 
 export default ItemSingleCar;
+
+// export const CarouselDesktop = () => {
+//   const dispatch = useDispatch();
+//   const { carItems } = useSelector((store) => store.car);
+
+//   useEffect(() => {
+//     if (carItems.length > 0) dispatch(getCarItems());
+//   }, []);
+
+//   return (
+//     <section className='py-10 hidden md:block'>
+//       <Carousel
+//         showThumbs={false}
+//         showIndicators={false}
+//         showStatus={false}
+//         centerMode
+//         centerSlidePercentage={45}
+//       >
+//         {cars.cars.map((car) => (
+//           <carItem key={car.id} car={car} />
+//         ))}
+//       </Carousel>
+//     </section>
+//   );
+// };
+
+// const ItemSingleCar = () => {
+//   <>
+//     <SmallCarousel />
+//     {/* <CarouselDesktop /> */}
+//   </>;
+// };
+
+// export default ItemSingleCar;

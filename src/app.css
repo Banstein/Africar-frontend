@@ -62,16 +62,8 @@ h1 {
   font-size: 2rem;
 }
 
-h2 {
-  font-size: 1rem;
-}
-
 h3 {
   font-size: 0.7rem;
-}
-
-h4 {
-  font-size: 0.5rem;
 }
 
 @media screen and (min-width: 800px) {
@@ -197,19 +189,15 @@ h4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .car-item img {
-  width: 15rem;
+  width: 10rem;
   height: 10rem;
   object-fit: cover;
-  border-radius: 50%;
-}
-
-.car-item p {
-  margin-bottom: 0.2rem;
-  font-size: 1rem;
-  color: black;
+  border-radius: 8px;
+  align-items: center;
 }
 
 .car-item h4 {
