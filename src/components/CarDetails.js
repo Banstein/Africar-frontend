@@ -15,8 +15,8 @@ const CarDetails = () => {
   }, []);
 
   return (
-    <div className="flex flex-col gap-[30%] p-2 items-center justify-center md:w-4/5">
-      <div key={car.id} className="flex flex-col gap-[30%]">
+    <div className="flex flex-wrap min-h-screen w-full content-center justify-center bg-white-200 py-10 px-15">
+      <div key={car.id} >
         <div className="flex  justify-center  w-full">
           <h1 className="font-semibold text-2xl">
             {' '}
@@ -33,19 +33,19 @@ const CarDetails = () => {
           </h1>
         </div>
 
-        <div className="flex flex-col  gap-[10%] items-center md:flex-row md:gap-[10%] md:items-center">
+        <div className="flex flex-col  gap-[1%] items-center md:flex-row md:gap-[2%] md:items-center">
           <div className="w-100 h-100 mx-auto relative mb-4 flex justify-center items-center content-center  ">
             <div className="flex justify-center items-center content-center " >
               <img className="w-[100%] h-[100%] md:w-[100%] md:h-[100%]" src={car.picture} alt="img" />
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center gap-4">
-            <p className="w-[70%] ">
+          <div className="flex flex-col justify-center items-center gap-5">
+            <p className="w-[90%] ">
               {' '}
               {car.description }
               {' '}
             </p>
-            <div className="w-[70%] ">
+            <div className="w-[90%] ">
               <p>
                 Price:
                 {car.price}
