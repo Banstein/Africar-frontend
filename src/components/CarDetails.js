@@ -10,7 +10,7 @@ import { GrUserExpert, GrUserSettings, GrUserAdd } from 'react-icons/gr';
 import { AiFillCar } from 'react-icons/ai';
 import { BsGithub, BsTwitter } from 'react-icons/bs';
 import { logUserOut } from '../features/users/userSlice';
-import Logo from '../assets/afrilogo.png';
+import Logo from '../assets/afrilogo.jpeg';
 import ItemSingleCar from './ItemSingleCar';
 import ChartStat from '../assets/chart.png'
 import './index.css';

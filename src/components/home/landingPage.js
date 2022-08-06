@@ -7,7 +7,7 @@ import { AiFillCar } from 'react-icons/ai';
 import { BsGithub, BsTwitter } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
-import Logo from '../../assets/afrilogo.png';
+import Logo from '../../assets/afrilogo.jpeg';
 import './landingPage.css';
 import Cards from '../carsCards/Cards';
 import CardAudi from '../carsCards/CardAudi';

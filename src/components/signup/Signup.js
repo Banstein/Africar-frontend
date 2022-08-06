@@ -6,7 +6,7 @@ import { useForm } from 'react-hook-form';
 import requestLogin from '../../helpers/logUserIn';
 import requestRegisterUser from '../../helpers/registerUser';
 import { logUserIn } from '../../features/users/userSlice';
-import logo from '../../assets/afrilogo.png';
+import logo from '../../assets/afrilogo.jpeg';
 import Hand from '../../assets/hand.png';
 import FormError from '../FormError';
 import SnipperLoginBtn from '../loaders/snipper';
