@@ -11,8 +11,8 @@ const ItemSingleCar = () => {
 
   return (
     <>
-      <div className='car-header hidden md:block'>
-        <Carousel
+      <div className='car-header flex'>
+        <div
           showThumbs={false}
           showIndicators={false}
           showStatus={false}
@@ -21,7 +21,7 @@ const ItemSingleCar = () => {
           {carItems.map((item) => (
             <CarItem key={item.id} car={item} />
           ))}
-        </Carousel>
+        </div>
       </div>
     </>
   );

@@ -205,6 +205,11 @@ h3 {
   letter-spacing: 2px;
 }
 
+.car-header {
+  background: red;
+  display: flex;
+}
+
 .item-price {
   color: var(--clr-grey-5);
 }
