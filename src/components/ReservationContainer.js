@@ -30,7 +30,6 @@ const ReservationContainer = () => {
           {reservations.map((reservation) => (
             <tr key={reservation.id}>
               <td>{reservation.city}</td>
-              <td>{reservation.car_name}</td>
               <td>
                 {new Date(reservation.created_at).toLocaleDateString('en-UK')}
               </td>
