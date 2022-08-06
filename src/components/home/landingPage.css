@@ -17,7 +17,8 @@
     linear-gradient(0deg, rgba(159, 189, 59, 1), rgba(159, 189, 59, 1));
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: right;  height: 100vh;
+  background-position: right;
+  height: 100vh;
 }
 
 .car-container h2 {
